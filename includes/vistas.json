@@ -1,0 +1,64 @@
+[
+    {
+        "nombre": "inicio",
+        "titulo": "Inicio",
+        "activa": true,
+        "restringida": false
+    },
+    {
+        "nombre": "detalle",
+        "titulo": "Detalle",
+        "activa": true,
+        "restringida": false
+    },
+    {
+        "nombre": "conoce-tu-companero",
+        "titulo": "Conoce a tu compañero",
+        "activa": true,
+        "restringida": false
+    }
+    ,
+    {
+        "nombre": "dragones",
+        "titulo": "Dragones",
+        "activa": true,
+        "restringida": false
+    }
+    ,
+    {
+        "nombre": "mapa",
+        "titulo": "Mapa",
+        "activa": true,
+        "restringida": false
+    },
+    {
+        "nombre": "resultado",
+        "titulo": "Tu dragón ideal",
+        "activa": true,
+        "restringida": false
+    },
+    {
+        "nombre": "misiones",
+        "titulo": "Misiones",
+        "activa": true,
+        "restringida": false
+    },
+    {
+        "nombre": "detalle-mision",
+        "titulo": "Detalle de la Misión",
+        "activa": true,
+        "restringida": false
+    },
+    {
+        "nombre": "preparacion",
+        "titulo": "Preparación",
+        "activa": true,
+        "restringida": false
+    },
+    {
+        "nombre": "resultado-mision",
+        "titulo": "Resultado de la misión",
+        "activa": true,
+        "restringida": false
+    }
+]

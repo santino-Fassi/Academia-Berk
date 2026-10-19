@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "nombre": "Barril de Pescado y Cangrejo Salado",
+        "categoria": "racion",
+        "descripcion": "Ración marina básica de alta duración para travesías largas.",
+        "costo_oro": 60,
+        "aporte_kg": 40,
+        "alimentos": ["Pescado", "Cangrejo", "Anguila eléctrica"],
+        "otorga_habilidad": null,
+        "neutraliza_debilidad": null,
+        "icono": {
+            "img": "",
+            "alt": ""
+        }
+    },
+    {
+        "id": 2,
+        "nombre": "Cajón de Carnes de Caza de Berk",
+        "categoria": "racion",
+        "descripcion": "Cortes calóricos de yak, cordero, pollo y carne vacuna.",
+        "costo_oro": 85,
+        "aporte_kg": 60,
+        "alimentos": ["Carne Vacuna", "Pollo", "Cordero", "Jamón", "Jabalí", "Yak"],
+        "otorga_habilidad": null,
+        "neutraliza_debilidad": null,
+        "icono": {
+            "img": "",
+            "alt": ""
+        }
+    },
+    {
+        "id": 3,
+        "nombre": "Alforja de Rocas Minerales y Panal Dulce",
+        "categoria": "racion",
+        "descripcion": "Mezcla de minerales volcánicos, miel, manzanas y vegetales.",
+        "costo_oro": 50,
+        "aporte_kg": 35,
+        "alimentos": ["Rocas", "Panal de miel", "Manzana", "Maiz", "Plantas", "Vegetales", "Hierba"],
+        "otorga_habilidad": null,
+        "neutraliza_debilidad": null,
+        "icono": {
+            "img": "",
+            "alt": ""
+        }
+    },
+    {
+        "id": 4,
+        "nombre": "Manto de Escamas Camaleónicas",
+        "categoria": "tactico",
+        "descripcion": "Cubierta oscura tejida por Valka que oculta la silueta en vuelos nocturnos.",
+        "costo_oro": 140,
+        "aporte_kg": 0,
+        "alimentos": [],
+        "otorga_habilidad": "Camuflaje",
+        "neutraliza_debilidad": "Cuerpo grande y blanco de tiro",
+        "icono": {
+            "img": "",
+            "alt": ""
+        }
+    },
+    {
+        "id": 5,
+        "nombre": "Linterna de Cristal de Furia Luminosa",
+        "categoria": "tactico",
+        "descripcion": "Ilumina cavernas profundas mediante pulsos acústicos y lumínicos.",
+        "costo_oro": 130,
+        "aporte_kg": 0,
+        "alimentos": [],
+        "otorga_habilidad": "Ecolocalización",
+        "neutraliza_debilidad": "Visibilidad en entornos oscuros o nocturnos",
+        "icono": {
+            "img": "",
+            "alt": ""
+        }
+    },
+    {
+        "id": 6,
+        "nombre": "Ungüento Impermeable de Gel de Pesadilla",
+        "categoria": "defensa",
+        "descripcion": "Aísla las glándulas de fuego y escamas contra tormentas y agua helada.",
+        "costo_oro": 120,
+        "aporte_kg": 0,
+        "alimentos": [],
+        "otorga_habilidad": null,
+        "neutraliza_debilidad": "Incapacidad para encender su fuego si está mojado",
+        "icono": {
+            "img": "",
+            "alt": ""
+        }
+    },
+    {
+        "id": 7,
+        "nombre": "Chispero de Pedernal de Bocón",
+        "categoria": "defensa",
+        "descripcion": "Mecanismo en el bozal que garantiza la ignición aún bajo lluvia intensa.",
+        "costo_oro": 110,
+        "aporte_kg": 0,
+        "alimentos": [],
+        "otorga_habilidad": null,
+        "neutraliza_debilidad": "Incapacidad de generar chispa si está mojado",
+        "icono": {
+            "img": "",
+            "alt": ""
+        }
+    },
+    {
+        "id": 8,
+        "nombre": "Filtro nasal de Carbón de Gronckle",
+        "categoria": "defensa",
+        "descripcion": "Neutraliza las toxinas de la Raíz del Dragón y los olores distractores.",
+        "costo_oro": 125,
+        "aporte_kg": 0,
+        "alimentos": [],
+        "otorga_habilidad": "Inmunidad a la raíz de dragón",
+        "neutraliza_debilidad": "Raíz del dragón",
+        "icono": {
+            "img": "",
+            "alt": ""
+        }
+    },
+    {
+        "id": 9,
+        "nombre": "Arnés Giroscópico de Cola",
+        "categoria": "tactico",
+        "descripcion": "Estabilizador mecánico de Hipo para maniobrar en ráfagas y túneles cerrados.",
+        "costo_oro": 150,
+        "aporte_kg": 0,
+        "alimentos": [],
+        "otorga_habilidad": "Maniobrabilidad y buceo excepcionales",
+        "neutraliza_debilidad": "Vientos Fuertes",
+        "icono": {
+            "img": "",
+            "alt": ""
+        }
+    },
+    {
+        "id": 10,
+        "nombre": "Coraza térmica de Hierro de Gronckle",
+        "categoria": "defensa",
+        "descripcion": "Mantiene el calor corporal del dragón en el ártico y permite embestir hielo.",
+        "costo_oro": 160,
+        "aporte_kg": 0,
+        "alimentos": [],
+        "otorga_habilidad": "Embestida frontal",
+        "neutraliza_debilidad": "Temperaturas frías",
+        "icono": {
+            "img": "",
+            "alt": ""
+        }
+    },
+    {
+        "id": 11,
+        "nombre": "Orejeras Acústicas de Cuero de Yak",
+        "categoria": "defensa",
+        "descripcion": "Aíslan los tímpanos del dragón contra ecos de cavernas y truenos.",
+        "costo_oro": 95,
+        "aporte_kg": 0,
+        "alimentos": [],
+        "otorga_habilidad": null,
+        "neutraliza_debilidad": "Confusión y desorientación ante ruidos fuertes",
+        "icono": {
+            "img": "",
+            "alt": ""
+        }
+    },
+    {
+        "id": 12,
+        "nombre": "Sabueso Rastreador de Viento",
+        "categoria": "tactico",
+        "descripcion": "Amplificador de corrientes de aire para localizar objetivos bajo tierra.",
+        "costo_oro": 135,
+        "aporte_kg": 0,
+        "alimentos": [],
+        "otorga_habilidad": "Rastreo",
+        "neutraliza_debilidad": "Facilidad para ser distraído por olores fuertes",
+        "icono": {
+            "img": "",
+            "alt": ""
+        }
+    }
+]

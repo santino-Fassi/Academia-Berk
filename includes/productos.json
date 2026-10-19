@@ -1,0 +1,83 @@
+[
+    {
+        "id": 1,
+        "nombre": "PlayStation 2",
+        "descripcion": "La consola más vendida de la historia. Disfruta de su inmenso catálogo de clásicos.",
+        "precio": 120000,
+        "imagen": "playstation_2.webp",
+        "alt": "Fotografía de la PlayStation 2",
+        "categoria": "Sony"
+    },
+    {
+        "id": 2,
+        "nombre": "Dreamcast",
+        "descripcion": "La última gran apuesta de SEGA que cambió las reglas del juego. Viene lista para revivir joyas como Sonic Adventure o Shenmue.",
+        "precio": 180000,
+        "imagen": "dreamcast.webp",
+        "alt": "Fotografía de la SEGA Dreamcast",
+        "categoria": "Sega"
+    },
+    {
+        "id": 3,
+        "nombre": "Nintendo DS",
+        "descripcion": "La consola que revolucionó el juego portátil con su icónica configuración de doble pantalla y control táctil.",
+        "precio": 110000,
+        "imagen": "nintendo_ds.webp",
+        "alt": "Fotografía de la Nintendo DS",
+        "categoria": "Nintendo"
+    },
+    {
+        "id": 4,
+        "nombre": "Xbox",
+        "descripcion": "La potente entrada de Microsoft en el mundo de las consolas, recordada por su arquitectura basada en PC y su catálogo de juegos de culto.",
+        "precio": 140000,
+        "imagen": "xbox.webp",
+        "alt": "Fotografía de la Xbox Original",
+        "categoria": "Microsoft"
+    },
+    {
+        "id": 5,
+        "nombre": "Nintendo 64",
+        "descripcion": "La consola que revolucionó el 3D con su icónico control y títulos que marcaron un antes y un después en la industria.",
+        "precio": 130000,
+        "imagen": "nintendo64.webp",
+        "alt": "Fotografía de la Nintendo 64",
+        "categoria": "Nintendo"
+    },
+    {
+        "id": 6,
+        "nombre": "PlayStation 1",
+        "descripcion": "La consola que cambió las reglas del mercado introduciendo los juegos en CD-ROM y revolucionando el entretenimiento doméstico.",
+        "precio": 95000,
+        "imagen": "playstation_1.webp",
+        "alt": "Fotografía de la PlayStation 1",
+        "categoria": "Sony"
+    },
+    {
+        "id": 7,
+        "nombre": "GameCube",
+        "descripcion": "La pequeña consola de Nintendo que destacó por su diseño cúbico y una potencia técnica capaz de ejecutar gráficos asombrosos.",
+        "precio": 160000,
+        "imagen": "gamecube.webp",
+        "alt": "Fotografía de la Nintendo GameCube",
+        "categoria": "Nintendo"
+    },
+    {
+        "id": 8,
+        "nombre": "Xbox 360",
+        "descripcion": "La consola que definió la era de la alta definición y llevó el juego online a otro nivel gracias a Xbox Live.",
+        "precio": 150000,
+        "imagen": "xbox_360.webp",
+        "alt": "Fotografía de la Xbox 360",
+        "categoria": "Microsoft"
+    },
+    {
+        "id": 9,
+        "nombre": "PlayStation 3",
+        "descripcion": "La consola que consolidó el uso del Blu-ray y nos brindó experiencias cinematográficas inolvidables en alta definición.",
+        "precio": 145000,
+        "imagen": "playstation_3.webp",
+        "alt": "Fotografía de la PlayStation 3",
+        "categoria": "Sony"
+    }
+]

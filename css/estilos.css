@@ -1,0 +1,171 @@
+:root {
+
+  /* Primary: Azul Fiordo / Furia Nocturna (mantiene coherencia con "marcado en azul") */
+  --bs-primary: #1d3549;
+  --bs-primary-rgb: 29, 53, 73;
+
+  /* OPCIÓN ALTERNATIVA PRIMARY
+     --bs-primary: #4a211b;
+     --bs-primary-rgb: 74, 33, 27; 
+  */
+
+  --bs-secondary: #5c534d;
+  --bs-secondary-rgb: 92, 83, 77;
+
+  --bs-success: #2d6a3e;
+  --bs-success-rgb: 45, 106, 62;
+
+  --bs-danger: #a6261f;
+  --bs-danger-rgb: 166, 38, 31;
+
+  --bs-warning: #b87314;
+  --bs-warning-rgb: 184, 115, 20;
+
+  --bs-info: #3a7ca5;
+  --bs-info-rgb: 58, 124, 165;
+
+  --bs-light: #f2e8d5;
+  --bs-light-rgb: 242, 232, 213;
+
+  --bs-dark: #211915;
+  --bs-dark-rgb: 33, 25, 21;
+
+  /* FONDOS INTERNOS, TEXTOS Y BORDES */
+
+  --bs-white: #faf5eb;
+  --bs-white-rgb: 250, 245, 235;
+
+  /* color de texto general y bordes */
+  --bs-body-color: #211915;
+  --bs-body-color-rgb: 33, 25, 21;
+  --bs-border-color: #d3c2a8;
+  --bs-border-color-translucent: rgba(74, 53, 40, 0.18);
+
+  --bs-info-border-subtle: #8ab0c7;
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: #142636;
+  --bs-btn-hover-border-color: #101e2b;
+  --bs-btn-active-bg: #101e2b;
+  --bs-btn-active-border-color: #0c1721;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: var(--bs-primary);
+  --bs-btn-hover-border-color: var(--bs-primary);
+  --bs-btn-active-bg: var(--bs-primary);
+  --bs-btn-active-border-color: var(--bs-primary);
+}
+
+.btn-secondary {
+  --bs-btn-bg: var(--bs-secondary);
+  --bs-btn-border-color: var(--bs-secondary);
+  --bs-btn-hover-bg: #48403b;
+  --bs-btn-hover-border-color: #3d3632;
+  --bs-btn-active-bg: #3d3632;
+  --bs-btn-active-border-color: #322c29;
+}
+
+.btn-dark {
+  --bs-btn-bg: var(--bs-dark);
+  --bs-btn-border-color: #3d302a;
+  --bs-btn-hover-bg: #352923;
+  --bs-btn-hover-border-color: var(--bs-warning);
+}
+
+.btn-purple {
+  --bs-btn-color: #faf5eb;
+  --bs-btn-bg: #4c2a59;
+  --bs-btn-border-color: #4c2a59;
+  --bs-btn-hover-color: #faf5eb;
+  --bs-btn-hover-bg: #391f43;
+  --bs-btn-hover-border-color: #2e1836;
+  --bs-btn-active-color: #faf5eb;
+  --bs-btn-active-bg: #2e1836;
+  --bs-btn-active-border-color: #231229;
+}
+
+/* tarjetas, listas desplegables e inputs */
+.card,
+.list-group-item {
+  --bs-card-bg: var(--bs-white);
+  --bs-list-group-bg: var(--bs-white);
+  --bs-card-border-color: var(--bs-border-color);
+  --bs-list-group-border-color: var(--bs-border-color);
+}
+
+.form-control,
+.form-check-input {
+  background-color: var(--bs-white);
+  border-color: #bfa98b;
+}
+
+.form-control:focus,
+.form-check-input:focus {
+  background-color: #fffdf9;
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+.form-check-input:checked {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  font-family: 'Trebuchet MS', sans-serif;
+  /* background-color: whitesmoke; */
+  background-size: cover;
+  color: #1a1818;
+  max-width: 1280px;
+  background-color: #856058;
+  background-image: url("../img/trama.webp");
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Caesar Dressing", system-ui;
+}
+
+img {
+    max-width: 100%;
+    margin: auto;
+    display: block;
+}
+
+.logo {
+  width: 4rem;
+}
+
+.card-dragon {
+  max-width: 736px;
+  width: fit-content;
+}
+
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    
+}

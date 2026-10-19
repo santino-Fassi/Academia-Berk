@@ -1,0 +1,290 @@
+[
+    {
+        "id": 1,
+        "nombre": "Furia Nocturna",
+        "clase": "Afilada",
+        "colores": ["Negro", "Azul Oscuro"],
+        "habilidades": ["Ataque en picada", "Dientes retráctiles", "Ecolocalización", "Espinas", "Camuflaje", "Invisibilidad por electricidad"],
+        "caracteristicas": ["Ojos felinos", "Aletas detrás de las patas traseras", "Aletas en la cola"],
+        "tamanio": {
+            "tipo": "Mediano",
+            "ancho": 8.74,
+            "alto": 1.75,
+            "alas": 15.33
+        },
+        "peso": 805.6,
+        "habitat": ["DESCONOCIDO"],
+        "dieta": ["Carne Vacuna", "Cangrejo", "Pescado", "Panal de miel", "Manzana"],
+        "fortalezas": [],
+        "debilidades": ["Raíz del dragón", "Vientos Fuertes", "Punto sensible", "Dependencia de la aleta de la cola", "Temperaturas frías", "Volar largas distancias", "Ataques en picada en espacios reducidos"],
+        "ilustracion": {
+            "img": "chimuelo.webp",
+            "alt": "Furia Nocturna"
+        }
+    },
+    
+    {
+        "id": 2,
+        "nombre": "Nadder Mortifero",
+        "clase": "Rastreador",
+        "colores": ["Negro", "Azul Oscuro"],
+        "habilidades": ["Disparo de espinas", "Increíble sentido del olfato", "velocidad mejorada", "Cola prensil"],
+        "caracteristicas": ["Cuerno nasal", "Corona puntiaguda", "Cola espinosa", "Sobremordida", "Mandíbula superior en forma de pico"],
+        "tamanio": {
+            "tipo": "Mediano",
+            "ancho": 9.91,
+            "alto": 3.52,
+            "alas": 16.44
+        },
+        "peso": 1192,
+        "habitat":["Bosques", "Cuevas", "Montañas"],
+        "dieta": ["Pollo", "Pescado", "Cordero", "Vegetales", "Yak"],
+        "fortalezas": [],
+        "debilidades": ["Punto ciego frontal", "Punto vulnerable bajo la barbilla", "Límite de disparos de fuego", "Motivación por la comida"],
+        "ilustracion": {
+            "img": "tormenta.webp",
+            "alt": "Nadder Mortifero"
+        }
+    },
+
+    {
+        "id": 3,
+        "nombre": "Cremallerus Espantoso",
+        "clase": "Misterio",
+        "colores": ["Verde", "Azul", "Dorado", "Crema en el vientre"],
+        "habilidades": ["Ouroboros llameante", "Transmisión de cerebros"],
+        "caracteristicas": ["Dos cabezas", "Cuernos", "Cola dividida", "Mechones a lo largo del cuello, la espalda y la cola"],
+        "tamanio": {
+            "tipo": "Largo",
+            "ancho": 21.59,
+            "alto": 2.46,
+            "alas": 14.43
+        },
+        "peso": 2737.9,
+        "habitat":["Bosques", "Cuevas"],
+        "dieta": ["Pescado", "Jamón", "Panal de miel"],
+        "fortalezas": [],
+        "debilidades": ["Conflicto de personalidades", "Confusión y desorientación ante ruidos fuertes", "Falta de velocidad", "Miedo a las anguilas", "Incapacidad de generar chispa si está mojado"],
+        "ilustracion": {
+            "img": "cremallerus.webp",
+            "alt": "Cremallerus Espantoso"
+        }
+    },
+
+    {
+        "id": 4,
+        "nombre": "Pesadilla Monstruosa",
+        "clase": "Fogonero",
+        "colores": ["Rojo", "Amarillo", "Verde"],
+        "habilidades": ["Autoinmolación", "Expansión de mandíbula"],
+        "caracteristicas": ["Alas con doble garra", "Dos pares de cuernos largos", "Espinas afiladas", "Cuello de serpiente", "Gel inflamable en la piel"],
+        "tamanio": {
+            "tipo": "Largo",
+            "ancho": 19.54,
+            "alto": 4.85,
+            "alas": 21.94
+        },
+        "peso": 2290.91,
+        "habitat":["Bosques", "Cuevas"],
+        "dieta": ["Cangrejo", "Maiz", "Manzana", "Pescado", "Cordero", "Jabalí", "Yak"],
+        "fortalezas": [],
+        "debilidades": ["Incapacidad para encender su fuego si está mojado", "Punto dulce en el hocico", "Incapacidad para volar cuando sus alas están en llamas", "Límite de disparos", "Mal genio y terquedad manipulable"],
+        "ilustracion": {
+            "img": "pesadillaMonstruosa.webp",
+            "alt": "Pesadilla Monstruosa"
+        }
+    },
+
+    {
+        "id": 5,
+        "nombre": "Brincanubes",
+        "clase": "Afilada",
+        "colores": ["Marrón madera", "Crema", "Azul"],
+        "habilidades": ["Maniobrabilidad y buceo excepcionales", "Vuelo lateral", "Giro de cabeza de aproximadamente 180°", "Saliva inflamable"],
+        "caracteristicas": ["Dos pares de alas", "Volantes en la cabeza", "Tres aletas caudales", "Cara aplastada", "Garras en forma de gancho"],
+        "tamanio": {
+            "tipo": "Largo",
+            "ancho": 24.7,
+            "alto": 9.53,
+            "alas": 34.09
+        },
+        "peso": 1134,
+        "habitat":["DESCONOCIDO"],
+        "dieta": ["Pescado", "Plantas"],
+        "fortalezas": [],
+        "debilidades": ["Sensibilidad debajo de la barbilla", "Límite de disparos de fuego", "Cuerpo grande y blanco de tiro", "Límite de disparos", "Muy territorial y protectora"],
+        "ilustracion": {
+            "img": "brincanubes.webp",
+            "alt": "Brincanubes"
+        }
+    },
+
+    {
+        "id": 6,
+        "nombre": "Furia Luminosa",
+        "clase": "Afilada",
+        "colores": ["Blanco", "Rosa", "Azul"],
+        "habilidades": ["Camuflaje mediante explosiones de plasma", "Vuelo sigiloso", "Escamas reflectantes", "Dientes retráctiles"],
+        "caracteristicas": ["Ojos de gato", "Cresta larga y delgada que recorre la columna vertebral", "Aletas caudales triangulares", "Cuatro pequeñas protuberancias en la cabeza", "Cresta larga y delgada en las patas"],
+        "tamanio": {
+            "tipo": "Mediano",
+            "ancho": 6.7,
+            "alto": 1.52,
+            "alas": 12.8
+        },
+        "peso": 725.74,
+        "habitat":["DESCONOCIDO"],
+        "dieta": ["Pescado"],
+        "fortalezas": [],
+        "debilidades": ["Dependencia del plasma para volverse invisible", "Límite de disparos de plama", "Visibilidad en entornos oscuros o nocturnos", "Naturaleza extremadamente desconfiada y cautelosa", "Extremadamente susceptible a venenos paralizantes"],
+        "ilustracion": {
+            "img": "lightFury.webp",
+            "alt": "Furia Luminosa"
+        }
+    },
+
+    {
+        "id": 7,
+        "nombre": "Skrill",
+        "clase": "Huelga",
+        "colores": ["Gris oscuro", "Morado", "Blanco"],
+        "habilidades": ["Electroquinesis", "Hibernación en el hielo", "Camuflaje con nubes oscuras", "Montar rayos para alcanzar velocidades supersónicas", "Consumo e Inmunidad a las anguilas eléctricas"],
+        "caracteristicas": ["Espinas metálicas afiladas en la espalda", "Largas garras en las alas", "Aletas caudales triangulares", "Corona con púas en la cabeza", "Púas similares a una barba debajo de la barbilla"],
+        "tamanio": {
+            "tipo": "Mediano",
+            "ancho": 6.7,
+            "alto": 1.84,
+            "alas": 12.19
+        },
+        "peso": 816.47,
+        "habitat":["Montañas","Bosques","Regiones frías" ],
+        "dieta": ["Pescado", "Cordero","Anguila eléctrica"],
+        "fortalezas": [],
+        "debilidades": ["Vulnerabilidad total al agua", "Límite de disparos de plama", "Dependencia de las tormentas y la electricidad externa", "Su cuerpo es incapaz de generar calor corporal suficiente para liberarse si queda atrapado en hielo denso", "En el suelo es un dragón mucho menos ágil y más torpe en comparación con su velocidad aérea"],
+        "ilustracion": {
+            "img": "skrill.webp",
+            "alt": "Skrill"
+        }
+    },
+
+    {
+        "id": 8,
+        "nombre": "Salvajibestia - Alfa",
+        "clase": "Marea",
+        "colores": ["Gris oscuro", "Rojo", "Blanco"],
+        "habilidades": ["Control mental de dragones", "Creación de nidos de dragones a partir de su propio hielo", "Adaptaciones subacuáticas"],
+        "caracteristicas": ["Grandes púas que sobresalen de la nuca", "Dientes pequeños en proporción al cuerpo", "Escamas similares a las del coral", "Aletas caudales."],
+        "tamanio": {
+            "tipo": "Gigantesco",
+            "ancho": 197.49,
+            "alto": 48.9,
+            "alas": 83.61
+        },
+        "peso": 90.718,
+        "habitat":["Nido de hielo oceánico"],
+        "dieta": ["Pescado"],
+        "fortalezas": [],
+        "debilidades": ["Vulnerabilidad a temperaturas extremas", "Cuerpo colosal y falta de agilidad", "Incapacidad de volverse invisible o camuflarse", "Pérdida de control del nido al ser derrotado", "Sus ojos y el interior de su boca son zonas vulnerables"],
+        "ilustracion": {
+            "img": "alfa.webp",
+            "alt": "Salvajibestia - Alfa"
+        }
+    },
+
+    {
+        "id": 9,
+        "nombre": "Cuernatrotante",
+        "clase": "Rastreador",
+        "colores": ["Verde", "Marrón", "Rojo"],
+        "habilidades": ["Rastreo", "Detección de desastres", "Embestida frontal"],
+        "caracteristicas": ["Cola con forma de maza, Boca parecida a un martillo neumático", "Cuello blindado", "Largos cuernos en la cabeza", "Pequeñas espinas en la espalda y la cola"],
+        "tamanio": {
+            "tipo": "Mediano",
+            "ancho": 16.48,
+            "alto": 3.35,
+            "alas": 25.08
+        },
+        "peso": 495,
+        "habitat":["Bosques"],
+        "dieta": ["Pescado", "Pollo"],
+        "fortalezas": [],
+        "debilidades": ["Facilidad para ser distraído por olores fuertes", "Cuerpo pesado y falta de agilidad aérea", "Límite de disparos reducidos", "Zona inferior más blanda", "Terquedad y visión de túnel"],
+        "ilustracion": {
+            "img": "rumblehorn.webp",
+            "alt": "Cuernatrotante"
+        }
+    },
+
+    {
+        "id": 10,
+        "nombre": "Goregutter",
+        "clase": "Boulder",
+        "colores": ["Carmesí", "Morado"],
+        "habilidades": ["Cuernos llameantes", "Llamada ensordecedora"],
+        "caracteristicas": ["Cuernos metálicos similares a los de un alce", "Cola en forma de hacha", "Espinas en forma de roca"],
+        "tamanio": {
+            "tipo": "Largo",
+            "ancho": 9.81,
+            "alto": 9.14,
+            "alas": 7.32
+        },
+        "peso": 1133.98,
+        "habitat":["DESCONOCIDO"],
+        "dieta": ["Pescado", "Pollo"],
+        "fortalezas": [],
+        "debilidades": ["Poca agilidad y velocidad reducida", "Astas propensas a engancharse", "Límite de disparos reducidos", "Sensible al veneno de Aguijón Venenoso"],
+        "ilustracion": {
+            "img": "goregutter.webp",
+            "alt": "Crimson Goregutter"
+        }
+    },
+
+    {
+        "id": 11,
+        "nombre": "Gronckle",
+        "clase": "Boulder",
+        "colores": ["Gris", "Marrón", "Beige"],
+        "habilidades": ["Explosión dispersa por impacto", "Inmunidad a la raíz de dragón", "Potencia de fuego recargable", "Volar hacia atrás y en todas direcciones"],
+        "caracteristicas": ["Protuberancias en el cuerpo", "Pequeña proporción de alas con respecto al cuerpo", "Colmillos afilados", "Cuerno nasal romo"],
+        "tamanio": {
+            "tipo": "Mediano",
+            "ancho": 4.51,
+            "alto": 2.62,
+            "alas": 5.6
+        },
+        "peso": 2596.4,
+        "habitat":["Bosques", "Cuevas"],
+        "dieta": ["Pescado", "Rocas", "Cordero", "Hierba"],
+        "fortalezas": [],
+        "debilidades": ["Dependencia absoluta de la ingesta de rocas", "Límite de disparos extremadamente bajo", "Velocidad y agilidad muy reducidas", "Punto dulce debajo de la barriga", "Alergia o indigestión a ciertos minerales"],
+        "ilustracion": {
+            "img": "groncke.webp",
+            "alt": "Gronckle"
+        }
+    },
+
+    {
+        "id": 12,
+        "nombre": "Terrible Terror",
+        "clase": "Fogonero",
+        "colores": ["Variados"],
+        "habilidades": ["Increíble precisión"],
+        "caracteristicas": ["Punta de la cola en forma de flecha", "Pequeñas espinas", "Pequeños cuernos", "Grandes ojos amarillos"],
+        "tamanio": {
+            "tipo": "Pequeño",
+            "ancho": 0.91,
+            "alto": 0.5,
+            "alas": 1.52
+        },
+        "peso": 6.35,
+        "habitat":["Casi todos los hábitats terrestres conocidos"],
+        "dieta": ["Pescado", "Pollo"],
+        "fortalezas": [],
+        "debilidades": ["Tamaño diminuto y poca fuerza física", "Conducta territorial y peleas internas", "Límite de disparos extremadamente bajo", "Vulnerabilidad a los depredadores y cazadores", "Extrema fascinación por la luz y los reflejos"],
+        "ilustracion": {
+            "img": "terrorTerrible.webp",
+            "alt": "Terrible Terror"
+        }
+    }
+
+]
