@@ -60,5 +60,17 @@
         "titulo": "Resultado de la misión",
         "activa": true,
         "restringida": false
+    },
+    {
+        "nombre": "compendio",
+        "titulo": "Compendio",
+        "activa": true,
+        "restringida": false
+    },
+    {
+        "nombre": "detalle-dragon",
+        "titulo": "Detalle del Dragón",
+        "activa": true,
+        "restringida": false
     }
 ]

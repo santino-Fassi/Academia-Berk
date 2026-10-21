@@ -46,5 +46,21 @@
             "img": "",
             "alt": ""
         }
+    },
+    {
+        "id": 4,
+        "titulo": "Persecución y rescate en miniatura",
+        "objetivo": "Encontrar y devolver al corral a los dragones bebé que huyeron",
+        "clima": "Tormenta leve y calor húmedo",
+        "terreno": "Isla de Berk",
+        "habitat_favorable": ["Montañas", "Regiones frías"],
+        "duracion_dias": 1,
+        "tamanio_riesgoso": ["Mediano"],
+        "habilidades_clave": ["Maniobrabilidad y buceo excepcionales", "Ataque en picada", "Cuernos llameantes", "Increíble sentido del olfato", "Rastreo", "Detección de desastres"],
+        "riesgos_debilidades": ["Volar largas distancias", "Tamaño diminuto y poca fuerza física", "Falta de velocidad", "Velocidad y agilidad muy reducidas"],
+        "imagen": {
+            "img": "",
+            "alt": ""
+        }
     }
 ]

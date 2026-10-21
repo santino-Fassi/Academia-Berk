@@ -18,7 +18,7 @@ class Perfil
         $perfil->razonamiento = $datos["personalidad"];
         $perfil->lugarDesconectar = $datos["habitat"];
         $perfil->ritmoVida = $datos["energia"];
-        $perfil->talentos = $datos["talentos"];
+        $perfil->talentos = $datos["talentos"] ?? [];
         $perfil->gustos = $datos["dieta"];
         $perfil->estilos = $datos["colores"];
 

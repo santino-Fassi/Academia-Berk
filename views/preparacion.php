@@ -98,7 +98,7 @@ $poolAliado = array_merge($aliado->getHabilidades(), $aliado->getCaracteristicas
                             $clase = "text-success fw-bold";
                             $origen = "(Cubierta por " . $dragon->getNombre() . ")";
                         } elseif (in_array($habilidad, $poolAliado)) {
-                            $clase = "text-primary fw-bold";
+                            $clase = "text-warning fw-bold";
                             $origen = "(Cubierta por " . $aliado->getNombre() . ")";
                         } elseif (in_array($habilidad, $habilidadesPorItems)) {
                             $clase = "text-success fw-bold";
@@ -166,7 +166,7 @@ $poolAliado = array_merge($aliado->getHabilidades(), $aliado->getCaracteristicas
                         <div class="card-body d-flex flex-column">
                             <div class="d-flex justify-content-between align-items-start mb-2">
                                 <h4 class="h5 card-title fw-bold mb-0"><?= $item->getNombre() ?></h4>
-                                <span class="badge bg-warning text-dark fs-6"><?= $item->getPrecio() ?> Oro</span>
+                                <span class="badge bg-warning fs-6"><?= $item->getPrecio() ?> Oro</span>
                             </div>
 
                             <p class="text-uppercase small fw-bold text-secondary mb-2">

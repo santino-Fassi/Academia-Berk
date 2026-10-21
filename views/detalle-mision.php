@@ -8,48 +8,141 @@ $aliado = $mision->sugerirCompaniero($dragon);
 
 ?>
 
-<section class="detalle-info">
-    <a href="index.php?vista=misiones" class="btn btn-secondary">Volver</a>
-    <div>
-        <img class="img-fluid d-block mx-auto" src="img/misiones/<?= $mision->getImagen()["img"] ?>"
-            alt="<?= $mision->getImagen()["alt"] ?>">
+<section class="detalle-info pagina-mision">
+
+    <!-- NAVEGACIÓN -->
+    <div class="navegacion-mision">
+        <a href="index.php?vista=misiones" class="btn-volver">
+            ← Volver a las misiones
+        </a>
+
+        <span class="sello-mision">
+            REGISTRO DE BERK / EXPEDICIÓN
+        </span>
     </div>
-    <div class="text-center row">
-        <h2 class=""><?= $mision->getTitulo() ?></h2>
-        <h3>Carácteristicas de la misión</h3>
-        <ul>
-            <li><span class="fw-bold">Clima esperado: </span><?= $mision->getClima() ?></li>
-            <li><span class="fw-bold">Tipo de entorno: </span><?= $mision->getTerreno() ?></li>
-            <li><span class="fw-bold">Duración de la misión: </span><?= $mision->getDuracion() ?></li>
-        </ul>
-        <h3><span class="fw-bold h2">Tu Objetivo</span></h3>
+
+    <!-- PORTADA -->
+    <header class="portada-mision">
+
+        <img
+            class="imagen-portada-mision"
+            src="img/misiones/<?= $mision->getImagen()["img"] ?>"
+            alt="<?= $mision->getImagen()["alt"] ?>"
+        >
+
+        <div class="contenido-portada-mision">
+
+            <span class="etiqueta-mision">
+                INFORME TÁCTICO
+            </span>
+
+            <h1><?= $mision->getTitulo() ?></h1>
+
+            <p>
+                Prepará a tu equipo. Estudiá el terreno.
+                Ningún jinete parte sin conocer los riesgos.
+            </p>
+
+        </div>
+
+    </header>
+
+    <!-- DATOS PRINCIPALES -->
+    <div class="datos-mision">
+
+        <article class="dato-mision">
+            <span class="icono-dato">✦</span>
+            <span class="etiqueta-dato">Clima esperado</span>
+            <span class="fw-bold"><?= $mision->getClima() ?></span>
+        </article>
+
+        <article class="dato-mision">
+            <span class="icono-dato">⌖</span>
+            <span class="etiqueta-dato">Tipo de terreno</span>
+            <span class="fw-bold"><?= $mision->getTerreno() ?></span>
+        </article>
+
+        <article class="dato-mision">
+            <span class="icono-dato">◷</span>
+            <span class="etiqueta-dato">Duración</span>
+            <span class="fw-bold"><?= $mision->getDuracion() ?> días</span>
+        </article>
+
+    </div>
+
+    <!-- OBJETIVO -->
+    <section class="objetivo-mision">
+
+        <div class="insignia-objetivo">OBJETIVO</div>
+        <h2>La misión</h2>
         <p><?= $mision->getObjetivo() ?></p>
 
+    </section>
 
-        <div class="col-12">
-            <h3>Tu compañero de misión</h3>
-            <p>En Berk nunca hacemos las cosas en solitario. Para facilitar la misión, te asignamos a un compañero cuyo
-                dragón se complementa con el tuyo y es ideal para la misión.</p>
-            <div class="card card-dragon mx-auto">
-                <img src="img/dragones/<?= $aliado->getIlustracion()["img"] ?>"
-                    alt="<?= $aliado->getIlustracion()["alt"] ?>" class="card-img-top">
-                <div class="card-body">
-                    <h3 class="card-title"><?= $aliado->getNombre() ?></h3>
-                    <p class="h4"><span class="fw-bold">Clase: </span> <?= $aliado->getClase() ?></p>
-                    <div class="card-header h5">Resumen</div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><span class="fw-bold">Peso: </span><?= $aliado->getPeso() ?> Kg</li>
-                        <li class="list-group-item"><span class="fw-bold">Tamaño:
-                            </span><?= $aliado->getTamanio()["tipo"] ?> (<?= $aliado->getTamanio()["ancho"] ?>m x
-                            <?= $aliado->getTamanio()["alto"] ?>m)</li>
-                        <li class="list-group-item"><span class="fw-bold">Curiosidad: </span>¿Sabías que los
-                            <?= $aliado->getNombre() ?> tienen
-                            <?= strtolower($aliado->getCaracteristicas()[array_rand($aliado->getCaracteristicas())]) ?>?
-                        </li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="index.php?vista=compendio&dragon_id=1" class="btn btn-purple" target="_blank">Saber más</a>
+
+        <!-- EQUIPO DE VUELO -->
+    <section class="seccion-mision equipo-mision">
+
+        <div class="encabezado-seccion-mision">
+            <span class="numero-seccion">01</span>
+
+            <div>
+                <p class="sobrelinea">COMPOSICIÓN DEL EQUIPO</p>
+                <h2>Tu compañero de misión</h2>
+            </div>
+        </div>
+
+        <p class="introduccion-seccion">
+            En Berk, ningún jinete vuela solo. Este dragón acompañará a tu equipo y aportará sus propias habilidades durante la expedición.
+        </p>
+            <div class="card mx-auto shadow-sm overflow-hidden">
+                <div class="row g-0 align-items-center">
+
+                    <div class="col-12 col-md-5 p-3 text-center">
+                        <img src="img/dragones/<?= $aliado->getIlustracion()["img"] ?>"
+                            alt="<?= $aliado->getIlustracion()["alt"] ?>" class="img-fluid rounded mx-auto d-block">
                     </div>
+
+                    <div class="col-12 col-md-7">
+                        <div class="card-body text-center text-md-start">
+                            <h3 class="card-title display-6 text-primary fw-bold mb-2">
+                                <?= $aliado->getNombre() ?>
+                            </h3>
+                            <p class="h4 mb-3">
+                                <span class="fw-bold text-primary">Clase: </span>
+                                <span class="badge bg-warning"><?= $aliado->getClase() ?></span>
+                            </p>
+
+                            <div class="border rounded overflow-hidden mb-3 text-start">
+                                <div class="card-header fw-bold h5 mb-0 text-primary">
+                                    Resumen
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <span class="fw-bold">Peso: </span><?= $aliado->getPeso() ?> Kg
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="fw-bold">Tamaño: </span><?= $aliado->getTamanio()["tipo"] ?>
+                                        (<?= $aliado->getTamanio()["ancho"] ?>m x <?= $aliado->getTamanio()["alto"] ?>m)
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="fw-bold">Curiosidad: </span>¿Sabías que los
+                                        <?= $aliado->getNombre() ?>
+                                        tienen
+                                        <?= strtolower($aliado->getCaracteristicas()[array_rand($aliado->getCaracteristicas())]) ?>?
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="card-footer bg-transparent border-0 px-0 pb-0 text-center text-md-end">
+                                <a href="index.php?vista=detalle-dragon&dragon_id=<?= $aliado->getId() ?>"
+                                    class="btn btn-purple px-4 fw-bold" target="_blank">
+                                    Saber más
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -72,12 +165,12 @@ $aliado = $mision->sugerirCompaniero($dragon);
                         foreach ($mision->getHabitatFavorable() as $habitat) {
                             $clase = "";
                             if (in_array($habitat, $dragon->getHabitat())) {
-                                $clase = "text-success fw-bold";
+                                $clase = "text-success";
                             } else if (in_array($habitat, $aliado->getHabitat())) {
-                                $clase = "text-primary fw-bold";
+                                $clase = "text-primary";
                             }
                             ?>
-                            <li class="<?= $clase ?>"><?= $habitat ?></li>
+                            <li class="opcion-atributo <?= $clase ?>"><?= $habitat ?></li>
                             <?php
                         }
                         ?>
@@ -91,12 +184,12 @@ $aliado = $mision->sugerirCompaniero($dragon);
                         foreach ($mision->getHabilidadesClave() as $habilidad) {
                             $clase = "";
                             if (in_array($habilidad, $dragon->getHabilidades())) {
-                                $clase = "text-success fw-bold";
+                                $clase = "text-success";
                             } else if (in_array($habilidad, $aliado->getHabilidades())) {
-                                $clase = "text-primary fw-bold";
+                                $clase = "text-primary";
                             }
                             ?>
-                            <li class="<?= $clase ?>"><?= $habilidad ?></li>
+                            <li class="opcion-atributo <?= $clase ?>"><?= $habilidad ?></li>
                             <?php
                         }
                         ?>
@@ -112,12 +205,12 @@ $aliado = $mision->sugerirCompaniero($dragon);
                         foreach ($mision->getRiesgosDebilidades() as $debilidad) {
                             $clase = "";
                             if (in_array($debilidad, $dragon->getDebilidades())) {
-                                $clase = "text-danger fw-bold";
+                                $clase = "text-danger";
                             } else if (in_array($debilidad, $aliado->getDebilidades())) {
-                                $clase = "text-warning fw-bold";
+                                $clase = "text-warning";
                             }
                             ?>
-                            <li class="<?= $clase ?>"><?= $debilidad ?></li>
+                            <li class="opcion-atributo <?= $clase ?>"><?= $debilidad ?></li>
                             <?php
                         }
                         ?>
@@ -132,12 +225,12 @@ $aliado = $mision->sugerirCompaniero($dragon);
                         foreach ($mision->getTamaniosRiesgosos() as $tamanio) {
                             $clase = "";
                             if ($tamanio == $dragon->getTamanio()["tipo"]) {
-                                $clase = "text-danger fw-bold";
+                                $clase = "text-danger";
                             } else if ($tamanio == $aliado->getTamanio()["tipo"]) {
-                                $clase = "text-warning fw-bold";
+                                $clase = "text-warning";
                             }
                             ?>
-                            <li class="<?= $clase ?>"><?= $tamanio ?></li>
+                            <li class="opcion-atributo<?= $clase ?>"><?= $tamanio ?></li>
                             <?php
                         }
                         ?>
@@ -149,36 +242,85 @@ $aliado = $mision->sugerirCompaniero($dragon);
 
         <div class="col-12">
             <?php
-            $raciones = $mision->calcularRacionesViaje($dragon, $aliado);
-            ?>
-            <h3>Comida necesaria</h3>
-            <p class="h5">El viaje va a ser duro. Los dragones tienen un apetito voraz y te demandarán comida. Cada
-                dragón tiene su dieta única, procura respetarla si no querés enfadarlos.</p>
-            <h4 class="h6">Dieta de los dragones</h4>
-            <ul>
-                <?php
+$raciones = $mision->calcularRacionesViaje($dragon, $aliado);
+?>
+
+<section class="seccion-mision provisiones-mision">
+
+    <div class="encabezado-seccion-mision">
+        <span class="numero-seccion">02</span>
+
+        <div>
+            <p class="sobrelinea">ANTES DE PARTIR</p>
+            <h2>Provisiones de vuelo</h2>
+        </div>
+    </div>
+
+    <p class="introduccion-seccion">
+        Cada dragón tiene su propia dieta. Prepará las
+        raciones necesarias para que ambos puedan completar
+        la expedición.
+    </p>
+
+    <div class="inventario-provisiones">
+
+        <h3>Inventario de alimentos</h3>
+
+        <ul class="lista-provisiones">
+            <?php
                 foreach ($raciones["dieta_combinada"] as $comida) {
+
                     $para = "";
-                    if (in_array($comida, $dragon->getDieta()) && in_array($comida, $aliado->getDieta())) {
-                        $para = $dragon->getNombre() . " y " . $aliado->getNombre();
+                    if (
+                        in_array($comida, $dragon->getDieta()) &&
+                        in_array($comida, $aliado->getDieta())
+                    ) {
+                        $para = $dragon->getNombre()
+                            . " y " . $aliado->getNombre();
+
                     } else if (in_array($comida, $dragon->getDieta())) {
                         $para = $dragon->getNombre();
                     } else {
                         $para = $aliado->getNombre();
                     }
-                    ?>
-                    <li><span class="fw-bold"><?= $comida ?></span> (Para <?= $para ?>)</li>
-                    <?php
+                ?>
+
+                    <li>
+                        <span class="icono-provision">✦</span>
+
+                        <span class="nombre-provision">
+                            <?= $comida ?>
+                        </span>
+
+                        <span class="destino-provision">
+                            <?= $para ?>
+                        </span>
+                    </li>
+
+                <?php
                 }
                 ?>
             </ul>
-            <p><span class="fw-bold">Comida mínima necesaria para los dos dragones:</span> <?= $raciones["total_kg"] ?>
-                Kg.</p>
+
         </div>
 
-        <div>
-            <a href="index.php?vista=preparacion&mision=<?= $mision->getId() ?>" class="btn btn-primary w-50">Preparar
-                Suministros</a>
+        <div class="total-provisiones">
+            <span>COMIDA MÍNIMA NECESARIA</span>
+
+            <strong>
+                <?= $raciones["total_kg"] ?> kg
+            </strong>
+
+            <p>Raciones calculadas para ambos dragones.</p>
+        </div>
+
+        <div class="accion-mision">
+            <a
+                href="index.php?vista=preparacion&mision=<?= $mision->getId() ?>"
+                class="btn btn-preparar"
+            >
+                Preparar suministros →
+            </a>
         </div>
     </div>
 

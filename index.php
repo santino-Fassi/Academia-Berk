@@ -40,8 +40,8 @@ $vista = Vista::validarVista($_GET["vista"] ?? "inicio");
         <nav class="navbar navbar-expand-lg py-3 px-md-4" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.php"><img class="d-none d-lg-block logo d-inline-block"
-                        src="img/logo.webp" alt="Logo de RetroCamp"><span
-                        class=" d-lg-none h1 py-3 text-light">ACADEMIA DE JINETES DE BERK</span></a>
+                        src="img/logo.webp" alt="Logo de la Academia"><span
+                        class=" d-lg-none h1 py-3 text-light">ACADEMIA DE JINETES</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown">
                     <span class="navbar-toggler-icon"></span>
@@ -60,7 +60,7 @@ $vista = Vista::validarVista($_GET["vista"] ?? "inicio");
         
     </header>
 
-    <main class="bg-light container-fluid py-5">
+    <main class="bg-light container-fluid py-2">
 
     <?php
         require_once "views/{$vista->getNombre()}.php";
@@ -68,21 +68,29 @@ $vista = Vista::validarVista($_GET["vista"] ?? "inicio");
 
     </main>
 
-    <footer class="bg-primary border-top border-warning border-2 py-2 px-1 mt-4">
-        <div class="c_autor text-center">
-            <img class="mb-3 border border-2 border-info-subtle" src="img/autor.webp"
-                alt="Fotografía del autor de esta página web, Santino Fassi">
-            <ul class="text-light">
-                <li>Nombres: Santino Fassi y Camila Gastager</li>
-                <li>Edades: 20 y 21 años</li>
-                <li><a class="btn btn-dark" href="mailto:santino.fassi@davinci.edu.ar">Contacto Santino</a></li>
-                <li><a class="btn btn-dark" href="mailto:camila.gastager@davinci.edu.ar">Contacto Camila</a></li>
-            </ul>
+    <footer class="py-4 mt-4 container-fluid rounded-bottom rounded-4 bg-primary">
+        <div class="row">
+            <div class="c_autor text-center col-12 col-md-6">
+                <img class="mb-3 border-2" src="img/fassi.webp"
+                    alt="Fotografía de uno de los autores de esta página web, Santino Fassi">
+                <ul class="text-light list-unstyled">
+                    <li>Nombre: Santino Fassi</li>
+                    <li>Edad: 20 años</li>
+                    <li><a class="btn btn-dark" href="mailto:santino.fassi@davinci.edu.ar">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="c_autor text-center col-12 col-md-6 flex-md-row-reverse">
+                <img class="mb-3 border-2" src="img/gastager.webp"
+                    alt="Fotografía de uno de los autores de esta página web, Camila Gastager">
+                <ul class="text-light list-unstyled">
+                    <li>Nombre: Camila Gastager</li>
+                    <li>Edad: 20 años</li>
+                    <li><a class="btn btn-dark" href="mailto:camila.gastager@davinci.edu.ar">Contacto</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
 
-
-    <!-- <script src="scripts/hoverEffect.js"></script> -->
 </body>
 
 </html>

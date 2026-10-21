@@ -1,6 +1,5 @@
 :root {
 
-  /* Primary: Azul Fiordo / Furia Nocturna (mantiene coherencia con "marcado en azul") */
   --bs-primary: #1d3549;
   --bs-primary-rgb: 29, 53, 73;
 
@@ -30,7 +29,7 @@
   --bs-dark: #211915;
   --bs-dark-rgb: 33, 25, 21;
 
-  /* FONDOS INTERNOS, TEXTOS Y BORDES */
+  /* FONDOS TEXTOS Y BORDES */
 
   --bs-white: #faf5eb;
   --bs-white-rgb: 250, 245, 235;
@@ -127,8 +126,6 @@
 body {
   margin: auto;
   font-family: 'Trebuchet MS', sans-serif;
-  /* background-color: whitesmoke; */
-  background-size: cover;
   color: #1a1818;
   max-width: 1280px;
   background-color: #856058;
@@ -136,6 +133,7 @@ body {
   background-repeat: repeat;
   background-size: auto;
 }
+
 
 h1,
 h2,
@@ -154,18 +152,1036 @@ img {
   width: 4rem;
 }
 
-.card-dragon {
-  max-width: 736px;
-  width: fit-content;
+
+.barra-chance {
+  height: 1.5rem;
+}
+
+
+.evaluacion-berk {
+    --berk-azul: #1d3549;
+    --berk-pergamino: #f2e8d5;
+    --berk-tinta: #211915;
+    --berk-bronce: #b87314;
+    --berk-borde: #d3c2a8;
+
+    overflow: hidden;
+    border: 1px solid var(--berk-borde);
+    border-radius: 18px;
+    background: var(--berk-pergamino);
+    color: var(--berk-tinta);
+    box-shadow: 0 18px 45px rgba(20, 18, 16, 0.25);
+}
+
+/* PORTADA */
+
+.portada-berk {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    color: #faf5eb;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(15, 29, 40, 0.65),
+            rgba(15, 29, 40, 0.95)
+        ),
+        url("../img/trama.webp") center / cover;
+    border-bottom: 4px solid var(--berk-bronce);
+}
+
+.portada-contenido {
+    max-width: 760px;
+}
+
+.insignia-berk {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--berk-bronce);
+    color: #f0c77c;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.16em;
+}
+
+.subtitulo-berk {
+    margin-bottom: 0.5rem;
+    color: #c7dce6;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.portada-berk h2 {
+    margin-bottom: 1rem;
+    color: #faf5eb;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.separador-runas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.2rem auto;
+    color: #e1b76c;
+    font-size: 1.5rem;
+}
+
+.separador-runas span {
+    width: 65px;
+    height: 1px;
+    background: #b87314;
+}
+
+.texto-portada {
+    max-width: 600px;
+    margin: 0 auto 0.75rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.texto-portada-secundario {
+    color: #d6c7ad;
+    font-style: italic;
+}
+
+.indicador-expediente {
+    margin-top: 2rem;
+    color: #d6c7ad;
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+}
+
+/* INTRODUCCIÓN */
+
+.introduccion-berk {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin: 2rem 2rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.35);
+}
+
+
+.introduccion-berk h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.introduccion-berk p {
+    margin-bottom: 0;
+    line-height: 1.7;
+}
+
+/* FORMULARIO */
+
+.formulario-berk {
+    padding: 2rem;
+    margin: 0;
+}
+
+.formulario-berk > div {
+    min-width: 0;
+}
+
+.panel-pregunta {
+    height: 100%;
+    padding: 1.5rem;
+    border: 1px solid var(--berk-borde);
+    border-top: 3px solid var(--berk-azul);
+    border-radius: 10px;
+    background: rgba(250, 245, 235, 0.85);
+    box-shadow: 0 5px 14px rgba(33, 25, 21, 0.07);
+}
+
+.titulo-pregunta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    float: none;
+    width: 100%;
+    margin-bottom: 1rem;
+    color: var(--berk-azul);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.numero-pregunta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--berk-bronce);
+    border-radius: 6px;
+    color: var(--berk-bronce);
+    font-size: 1rem;
+    background-color:rgba(250, 245, 235, 0.85);
+}
+
+.descripcion-pregunta {
+    margin-bottom: 1.25rem;
+    line-height: 1.7;
+}
+
+/* OPCIONES */
+
+.opcion-dragon {
+    position: relative;
+    margin-bottom: 0.65rem;
+    border: 1px solid var(--berk-borde);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.opcion-dragon .form-check-input {
+    position: absolute;
+    top: 1rem;
+    left: 0.8rem;
+    float: none;
+    margin: 0;
+}
+
+.opcion-dragon label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    padding: 0.85rem 0.8rem 0.85rem 2.8rem;
+    cursor: pointer;
+    line-height: 1.55;
+}
+
+.letra-opcion {
+    flex-shrink: 0;
+    color: #8a5a17;
+    font-weight: bold;
+}
+
+.opcion-dragon:hover {
+    transform: translateY(-2px);
+    border-color: var(--berk-bronce);
+    background: #fffaf0;
+}
+
+.opcion-dragon:has(input:checked) {
+    border-color: var(--berk-azul);
+    background: #dce8e9;
+    box-shadow: 0 3px 10px rgba(29, 53, 73, 0.12);
+}
+
+.opcion-dragon:has(input:focus-visible) {
+    outline: 3px solid #75a7b8;
+    outline-offset: 2px;
+}
+
+/* CAMPO DE NOMBRE */
+
+.formulario-berk .form-control {
+    padding: 0.85rem 1rem;
+    border: 1px solid #bfa98b;
+    border-radius: 8px;
+}
+
+.formulario-berk .form-control:focus {
+    border-color: var(--berk-azul);
+    box-shadow: 0 0 0 0.2rem rgba(29, 53, 73, 0.15);
+}
+
+/* CIERRE Y BOTÓN */
+
+.cierre-evaluacion {
+    padding: 2.5rem 1rem 1.5rem;
+    text-align: center;
+}
+
+.ornamento-cierre {
+  margin-bottom: 0.75rem;
+  color: var(--berk-bronce);
+  font-size: 2rem;
+}
+
+.texto-cierre {
+  margin-bottom: 1.25rem;
+  color: var(--berk-azul);
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.btn-descubrir {
+    padding: 1rem 2rem;
+    border: 2px solid #d9ad60;
+    border-radius: 5px;
+    background: var(--berk-azul);
+    color: #faf5eb;
+    font-weight: bold;
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+    box-shadow: 0 5px 0 #122331;
+    transition: background-color 0.2s ease,
+    transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-descubrir:hover {
+    border-color: #f0c77c;
+    background: #294d66;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 0 #122331;
+}
+
+.btn-descubrir:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #122331;
+}
+
+.nota-cierre {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    color: #74614c;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+}
+
+
+/* ==========================================
+   INFORME DE MISIÓN - BERK
+   ========================================== */
+
+.pagina-mision {
+    --mision-azul: #1d3549;
+    --mision-pergamino: #f2e8d5;
+    --mision-bronce: #b87314;
+    --mision-tinta: #211915;
+    --mision-borde: #d3c2a8;
+
+    margin: 3rem auto;
+    padding: clamp(1rem, 3vw, 2.5rem);
+    border: 1px solid var(--mision-borde);
+    border-radius: 16px;
+    background: var(--mision-pergamino);
+    color: var(--mision-tinta);
+    box-shadow: 0 15px 40px rgba(20, 18, 16, 0.2);
+}
+
+/* NAVEGACIÓN */
+
+.navegacion-mision {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-volver {
+    color: var(--mision-azul);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-volver:hover {
+    color: var(--mision-bronce);
+}
+
+.sello-mision,
+.etiqueta-mision {
+    color: var(--mision-bronce);
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+}
+
+/* PORTADA */
+
+.portada-mision {
+    position: relative;
+    min-height: 300px;
+    display: flex;
+    align-items: end;
+    overflow: hidden;
+    border-radius: 12px;
+    background: var(--mision-azul);
+}
+
+.imagen-portada-mision {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenido-portada-mision {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: clamp(1.5rem, 5vw, 3rem);
+    color: #faf5eb;
+    background: linear-gradient(
+        0deg,
+        rgba(15, 29, 40, 0.97),
+        rgba(15, 29, 40, 0.05)
+    );
+}
+
+.contenido-portada-mision h1 {
+    margin: 0.75rem 0;
+    color: #faf5eb;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    overflow-wrap: anywhere;
+}
+
+.contenido-portada-mision p {
+    max-width: 620px;
+    margin-bottom: 0;
+    line-height: 1.7;
+}
+
+/* DATOS PRINCIPALES */
+
+.datos-mision {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.dato-mision {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    padding: 1.25rem;
+    border: 1px solid var(--mision-borde);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.35);
+    overflow-wrap: anywhere;
+}
+
+.icono-dato {
+    color: var(--mision-bronce);
+    font-size: 1.6rem;
+}
+
+.etiqueta-dato {
+    color: #74614c;
+    font-size: 0.8rem;
+}
+
+.dato-mision strong {
+    color: var(--mision-azul);
+}
+
+/* OBJETIVO */
+
+.objetivo-mision {
+    margin-bottom: 2rem;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    border-left: 5px solid var(--mision-bronce);
+    border-radius: 0 10px 10px 0;
+    background: var(--mision-azul);
+    color: #faf5eb;
+}
+
+.insignia-objetivo {
+    display: inline-block;
+    padding: 0.35rem 0.65rem;
+    margin-bottom: 1rem;
+    border: 1px solid #b87314;
+    color: #f0c77c;
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+}
+
+.objetivo-mision h2 {
+    color: #faf5eb;
+}
+
+.objetivo-mision p {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* SECCIONES */
+
+.seccion-mision {
+    margin-top: 2rem;
+    padding: clamp(1rem, 3vw, 2rem);
+    border: 1px solid var(--mision-borde);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.encabezado-seccion-mision {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.numero-seccion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--mision-bronce);
+    border-radius: 8px;
+    color: var(--mision-bronce);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.sobrelinea {
+    margin-bottom: 0.25rem;
+    color: #806744;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+}
+
+.encabezado-seccion-mision h2 {
+    margin: 0;
+    color: var(--mision-azul);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.introduccion-seccion {
+    max-width: 800px;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+/* INVENTARIO */
+
+.inventario-provisiones {
+    padding: 1.25rem;
+    border: 1px solid var(--mision-borde);
+    border-radius: 10px;
+    background: #faf5eb;
+}
+
+.inventario-provisiones h3 {
+    color: var(--mision-azul);
+    font-size: 1.25rem;
+}
+
+.lista-provisiones {
+    padding: 0;
+    margin: 1rem 0 0;
+    list-style: none;
+}
+
+.lista-provisiones li {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--mision-borde);
+}
+
+.lista-provisiones li:last-child {
+    border-bottom: 0;
+}
+
+.icono-provision {
+    color: var(--mision-bronce);
+}
+
+.nombre-provision {
+    flex: 1;
+    font-weight: bold;
+}
+
+.destino-provision {
+    color: #74614c;
+    font-size: 0.9rem;
+}
+
+/* TOTAL */
+
+.total-provisiones {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background: var(--mision-azul);
+    color: #faf5eb;
+}
+
+.total-provisiones > span {
+    display: block;
+    color: #d6c7ad;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+}
+
+.total-provisiones strong {
+    display: block;
+    margin: 0.5rem 0;
+    color: #f0c77c;
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.total-provisiones p {
+    margin-bottom: 0;
+}
+
+/* ACCIÓN FINAL */
+
+.accion-mision {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.btn-preparar {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 2px solid #d9ad60;
+    border-radius: 5px;
+    background: var(--mision-azul);
+    color: #faf5eb;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.btn-preparar:hover {
+    background: #294d66;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* LISTAS DE ATRIBUTOS DE LAS MISIONES */
+
+.lista-atributos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 0;
+    margin: 20px 0;
+    list-style: none;
+}
+
+.opcion-atributo {
+    display: flex;
+    align-items: center;
+    min-height: 52px;
+    padding: 12px 15px;
+    background-color: #f2e8d5;
+    color: #211915;
+    border: 2px solid #d3c2a8;
+    border-left: 5px solid #5c534d;
+    border-radius: 8px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.opcion-atributo.text-success {
+    border-left-color: #2d6a3e;
+    color: #2d6a3e;
+}
+
+
+.opcion-atributo.text-primary {
+    border-left-color: #3a7ca5;
+    color: #1d5c7a;
+}
+
+
+.opcion-atributo.text-danger {
+    border-left-color: #a6261f;
+    color: #a6261f;
+}
+
+
+.opcion-atributo.text-warning {
+    border-left-color: #b87314;
+    color: #87500b;
 }
 
 
 
-/* Medium devices (tablets, 768px and up) */
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .datos-mision {
+        grid-template-columns: 1fr;
+    }
+
+    .portada-mision {
+        min-height: 260px;
+    }
+
+    .sello-mision {
+        font-size: 0.65rem;
+    }
+
+    .lista-provisiones li {
+        gap: 0.4rem;
+    }
+
+    .destino-provision {
+        width: 100%;
+        padding-left: 1.3rem;
+    }
+
+    .btn-preparar {
+        width: 100%;
+    }
+}
+
+.catalogo-misiones {
+    padding: 0;
+    overflow: hidden;
+    background-color: #f2e8d5;
+    border: 1px solid #d3c2a8;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(33, 25, 21, 0.18);
+}
+
+.portada-catalogo {
+    position: relative;
+    padding: 55px 25px 45px;
+    background-color: #1d3549;
+    color: #faf5eb;
+    border-bottom: 5px solid #b87314;
+}
+
+.sello-catalogo {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 7px 13px;
+    border: 1px solid #b87314;
+    color: #f0cf8b;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.portada-catalogo h2 {
+    margin-bottom: 15px;
+    color: #faf5eb;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.separador-catalogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 20px auto;
+    color: #e2b65e;
+}
+
+.separador-catalogo::before,
+.separador-catalogo::after {
+    width: 65px;
+    height: 1px;
+    background-color: #b87314;
+    content: "";
+}
+
+.separador-catalogo span {
+    font-size: 1.2rem;
+}
+
+.portada-catalogo > p {
+    max-width: 620px;
+    margin: 0 auto 25px;
+    color: #e4ded2;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.estado-catalogo {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 9px 15px;
+    border: 1px solid rgba(242, 232, 213, 0.3);
+    border-radius: 4px;
+    color: #f2e8d5;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.punto-estado {
+    width: 9px;
+    height: 9px;
+    background-color: #7fb77e;
+    border-radius: 50%;
+}
+
+/* DISTRIBUCIÓN DE TARJETAS */
+
+.grid-misiones {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 25px;
+    padding: 35px;
+}
+
+/* TARJETA INDIVIDUAL */
+
+.tarjeta-mision {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    background-color: #faf5eb;
+    border: 1px solid #d3c2a8;
+    border-radius: 9px;
+    box-shadow: 0 5px 13px rgba(33, 25, 21, 0.09);
+}
+
+/* IMAGEN Y DATOS DE EXPEDICIÓN */
+
+.imagen-mision {
+    position: relative;
+    height: 205px;
+    overflow: hidden;
+    background-color: #5c534d;
+    border-bottom: 4px solid #b87314;
+}
+
+.imagen-mision img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.numero-expedicion,
+.sello-duracion {
+    position: absolute;
+    padding: 8px 10px;
+    background-color: #1d3549;
+    color: #faf5eb;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.numero-expedicion {
+    top: 12px;
+    left: 12px;
+}
+
+.sello-duracion {
+    right: 12px;
+    bottom: 12px;
+    background-color: #b87314;
+    color: #211915;
+}
+
+/* CONTENIDO */
+
+.contenido-mision {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 23px;
+}
+
+.etiqueta-mision {
+    margin-bottom: 9px;
+    color: #8a642b;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.contenido-mision h3 {
+    margin-bottom: 12px;
+    color: #1d3549;
+    font-size: 1.55rem;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+.linea-mision {
+    width: 55px;
+    height: 3px;
+    margin-bottom: 17px;
+    background-color: #b87314;
+}
+
+.objetivo-mision {
+    flex: 1;
+    margin-bottom: 22px;
+    color: #4c4038;
+    font-size: 0.97rem;
+    line-height: 1.75;
+}
+
+/* COMPAÑERO */
+
+.aliado-mision {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 22px;
+    padding: 14px;
+    background-color: #e8e0cf;
+    border: 1px solid #d3c2a8;
+    border-left: 4px solid #2d6a3e;
+    border-radius: 5px;
+}
+
+.icono-aliado {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 37px;
+    background-color: #1d3549;
+    border-radius: 50%;
+    color: #f0cf8b;
+    font-size: 1.1rem;
+}
+
+.texto-aliado {
+    display: block;
+    margin-bottom: 4px;
+    color: #5c534d;
+    font-size: 0.67rem;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+}
+
+.aliado-mision p {
+    margin: 0;
+    color: #1d3549;
+    font-size: 1.05rem;
+    font-weight: 800;
+    overflow-wrap: anywhere;
+}
+
+/* BOTÓN */
+
+.btn-mision {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    margin-top: auto;
+    padding: 13px 16px;
+    background-color: #1d3549;
+    border: 2px solid #1d3549;
+    border-radius: 5px;
+    color: #faf5eb;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.btn-mision span {
+    color: #f0cf8b;
+    font-size: 1.3rem;
+}
+
+/* CIERRE DEL CATÁLOGO */
+
+.pie-catalogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 23px;
+    background-color: #e8e0cf;
+    border-top: 1px solid #d3c2a8;
+    color: #5c534d;
+    text-align: center;
+}
+
+.pie-catalogo span {
+    color: #b87314;
+}
+
+.pie-catalogo p {
+    margin: 0;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+
+
 @media (min-width: 768px) {
+    .lista-atributos {
+        grid-template-columns: 2fr;
+        gap: 8px;
+    }
+
+    .opcion-atributo {
+        min-height: 46px;
+        padding: 10px 12px;
+    }
+
+    .portada-catalogo {
+        padding: 40px 20px;
+    }
+
+    .grid-misiones {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 18px;
+    }
+
+    .imagen-mision {
+        height: 220px;
+    }
+
+    .contenido-mision {
+        padding: 20px;
+    }
+
+    .pie-catalogo {
+        padding: 20px 15px;
+        gap: 9px;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    
+    .grid-misiones {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        padding: 25px;
+    }
 }
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-preparar {
+        transition: none;
+    }
+}
+
+

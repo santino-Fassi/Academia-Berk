@@ -28,7 +28,7 @@ $resultado = $mision->calcularResultadoMision($dragon, $aliado, $inventario);
             <?= $resultado["porcentaje"] ?>%
         </p>
 
-        <div class="progress mb-4" style="height: 25px;">
+        <div class="progress mb-4 barra-chance">
             <div class="progress-bar bg-<?= $resultado["color"] ?> progress-bar-striped progress-bar-animated fw-bold" 
                  role="progressbar" 
                  style="width: <?= $resultado['porcentaje'] ?>%" 
