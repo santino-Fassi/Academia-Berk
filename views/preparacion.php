@@ -42,7 +42,7 @@ $poolAliado = array_merge($aliado->getHabilidades(), $aliado->getCaracteristicas
     ?>
     <div class="row text-center mb-5 g-3">
         <div class="col-12 col-md-6">
-            <div class="p-3 border rounded bg-white shadow-sm">
+            <div class="p-3 border rounded bg-white shadow-sm h-100">
                 <h3 class="h5 fw-bold">Oro de la Academia</h3>
                 <p class="display-6 fw-bold <?= $presupuestoExcedido ? 'text-danger' : 'text-warning' ?>">
                     <?= $oroActual ?> / <?= $inventario->getOroInicial() ?>
@@ -56,7 +56,7 @@ $poolAliado = array_merge($aliado->getHabilidades(), $aliado->getCaracteristicas
         </div>
 
         <div class="col-12 col-md-6">
-            <div class="p-3 border rounded bg-white shadow-sm">
+            <div class="p-3 border rounded bg-white shadow-sm h-100">
                 <h3 class="h5 fw-bold">Raciones de Viaje (<?= $mision->getDuracion() ?> días)</h3>
                 <p class="display-6 fw-bold <?= ($comidaCubierta["total_kg"] >= $raciones['total_kg']) ? 'text-success' : 'text-danger' ?>">
                     <?= $comidaCubierta["total_kg"] ?> / <?= $raciones["total_kg"] ?> Kg
@@ -187,14 +187,13 @@ $poolAliado = array_merge($aliado->getHabilidades(), $aliado->getCaracteristicas
                             </ul>
 
                             <div class="form-check mt-auto pt-2 border-top">
-                                <!-- onchange="this.form.submit()" hace que PHP actualice los colores y el oro automáticamente al tildar -->
                                 <?php if ($item->getCategoria() == "racion") { ?>
-                                <input class="form-control d-inline w-50" type="number" name="suministros[<?=$item->getId()?>]" id="item_<?= $item->getId() ?>" min="0" value="<?= $inventario->cantidadSuministro($item->getId()) ?>">
+                                <input onchange="this.form.submit()" class="form-control d-inline w-50" type="number" name="suministros[<?=$item->getId()?>]" id="item_<?= $item->getId() ?>" min="0" value="<?= $inventario->cantidadSuministro($item->getId()) ?>">
                                 <label class="form-check-label fw-bold" for="item_<?= $item->getId() ?>">
                                     Unidades
                                 </label>
                                 <?php } else { ?>
-                                <input class="form-check-input" type="checkbox" name="suministros[<?=$item->getId()?>]" 
+                                <input onchange="this.form.submit()" class="form-check-input" type="checkbox" name="suministros[<?=$item->getId()?>]" 
                                        id="item_<?= $item->getId() ?>" value="<?= 1 ?>" 
                                        <?= $checked ?>>
                                 <label class="form-check-label fw-bold" for="item_<?= $item->getId() ?>">
@@ -210,9 +209,9 @@ $poolAliado = array_merge($aliado->getHabilidades(), $aliado->getCaracteristicas
 
         <!-- BOTONES DE ACCIÓN -->
         <div class="d-flex justify-content-center gap-3">
-            <button type="submit" class="btn btn-outline-primary btn-lg">
-                Calcular Suministros
-            </button>
+            <a href="index.php?vista=preparacion&mision=<?=$mision->getId()?>" class="btn btn-outline-primary btn-lg">
+                Reiniciar Preparación
+            </a>
 
             <a href="index.php?vista=resultado-mision&mision=<?=$mision->getId()?>"
                     class="btn btn-primary btn-lg px-5 fw-bold <?=$presupuestoExcedido? "d-none": ""?>">

@@ -10,8 +10,22 @@ class Perfil
     private string $gustos;
     private string $estilos;
 
-
-    public static function crearPerfil(array $datos): self {
+    /**
+     * Crea e inicializa una nueva instancia de Perfil a partir de los datos enviados por el usuario.
+     *
+     * @param array{
+     *     nombreJinete: string,
+     *     personalidad: string,
+     *     habitat: string,
+     *     energia: string,
+     *     talentos?: string[],
+     *     dieta: string,
+     *     colores: string
+     * } $datos Array asociativo con las respuestas del formulario del jinete.
+     * @return self Nueva instancia de Perfil configurada.
+     */
+    public static function crearPerfil(array $datos): self
+    {
         $perfil = new self();
 
         $perfil->nombre = $datos["nombreJinete"];
@@ -28,7 +42,8 @@ class Perfil
 
     /**
      * Calcula y devuelve el dragón con mayor afinidad según las respuestas del perfil.
-     * @return Dragon
+     *
+     * @return Dragon El dragón que obtuvo la mayor cantidad de coincidencias (o el primero por defecto).
      */
     public function calcularAfinidad(): Dragon
     {
@@ -174,15 +189,20 @@ class Perfil
 
             switch ($this->ritmoVida) {
                 case "inquieto_agil":
-                    if ($dragon->getTamanio()["tipo"] == "Pequeño") $coincidencias += 2;
-                    else if ($dragon->getTamanio()["tipo"] == "Mediano") $coincidencias++;
+                    if ($dragon->getTamanio()["tipo"] == "Pequeño")
+                        $coincidencias += 2;
+                    else if ($dragon->getTamanio()["tipo"] == "Mediano")
+                        $coincidencias++;
                     break;
                 case "tranquilo_firme":
-                    if ($dragon->getTamanio()["tipo"] == "Mediano")$coincidencias += 2;
-                    else if ($dragon->getTamanio()["tipo"] == "Largo") $coincidencias++;
+                    if ($dragon->getTamanio()["tipo"] == "Mediano")
+                        $coincidencias += 2;
+                    else if ($dragon->getTamanio()["tipo"] == "Largo")
+                        $coincidencias++;
                     break;
                 case "intenso_imponente":
-                    if ($dragon->getTamanio()["tipo"] == "Largo" || $dragon->getTamanio()["tipo"] == "Gigantesco") $coincidencias += 2;
+                    if ($dragon->getTamanio()["tipo"] == "Largo" || $dragon->getTamanio()["tipo"] == "Gigantesco")
+                        $coincidencias += 2;
                     break;
             }
 
@@ -190,8 +210,10 @@ class Perfil
 
             foreach ($this->talentos as $talento) {
                 $matches = count(array_intersect($mapaTalentos[$talento], $rasgosDragon));
-                if ($matches >= 3) $coincidencias += 2;
-                else if ($matches >= 1) $coincidencias++;
+                if ($matches >= 3)
+                    $coincidencias += 2;
+                else if ($matches >= 1)
+                    $coincidencias++;
             }
 
             $comidasRelacionadas = $mapaGustos[$this->gustos];
@@ -220,59 +242,73 @@ class Perfil
 
 
 
-	public function getNombre() : string {
-		return $this->nombre;
-	}
+    public function getNombre(): string
+    {
+        return $this->nombre;
+    }
 
-	public function setNombre(string $value) {
-		$this->nombre = $value;
-	}
+    public function setNombre(string $value)
+    {
+        $this->nombre = $value;
+    }
 
-	public function getRazonamiento() : string {
-		return $this->razonamiento;
-	}
+    public function getRazonamiento(): string
+    {
+        return $this->razonamiento;
+    }
 
-	public function setRazonamiento(string $value) {
-		$this->razonamiento = $value;
-	}
+    public function setRazonamiento(string $value)
+    {
+        $this->razonamiento = $value;
+    }
 
-	public function getLugarDesconectar() : string {
-		return $this->lugarDesconectar;
-	}
+    public function getLugarDesconectar(): string
+    {
+        return $this->lugarDesconectar;
+    }
 
-	public function setLugarDesconectar(string $value) {
-		$this->lugarDesconectar = $value;
-	}
+    public function setLugarDesconectar(string $value)
+    {
+        $this->lugarDesconectar = $value;
+    }
 
-	public function getRitmoVida() : string {
-		return $this->ritmoVida;
-	}
+    public function getRitmoVida(): string
+    {
+        return $this->ritmoVida;
+    }
 
-	public function setRitmoVida(string $value) {
-		$this->ritmoVida = $value;
-	}
+    public function setRitmoVida(string $value)
+    {
+        $this->ritmoVida = $value;
+    }
 
-	public function getTalentos() : array {
-		return $this->talentos;
-	}
+    public function getTalentos(): array
+    {
+        return $this->talentos;
+    }
 
-	public function setTalentos(array $value) {
-		$this->talentos = $value;
-	}
+    public function setTalentos(array $value)
+    {
+        $this->talentos = $value;
+    }
 
-	public function getGustos() : string {
-		return $this->gustos;
-	}
+    public function getGustos(): string
+    {
+        return $this->gustos;
+    }
 
-	public function setGustos(string $value) {
-		$this->gustos = $value;
-	}
+    public function setGustos(string $value)
+    {
+        $this->gustos = $value;
+    }
 
-	public function getEstilos() : string {
-		return $this->estilos;
-	}
+    public function getEstilos(): string
+    {
+        return $this->estilos;
+    }
 
-	public function setEstilos(string $value) {
-		$this->estilos = $value;
-	}
+    public function setEstilos(string $value)
+    {
+        $this->estilos = $value;
+    }
 }

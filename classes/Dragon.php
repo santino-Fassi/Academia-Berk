@@ -16,6 +16,11 @@ class Dragon
     private array $debilidades;
     private array $ilustracion;
 
+    /**
+     * Lee el repositorio dragones.json y devuelve el catálogo completo de objetos Dragon.
+     *
+     * @return Dragon[] Array de instancias de Dragon.
+     */
     public static function catalogo_completo(): array
     {
         $catalogo = [];
@@ -43,6 +48,12 @@ class Dragon
         return $catalogo;
     }
 
+    /**
+     * Busca y devuelve un dragón específico del catálogo según su identificador único.
+     *
+     * @param int $id Identificador único del dragón.
+     * @return self|null Instancia de Dragon si se encuentra, o null en caso contrario.
+     */
     public static function dragonPorId(int $id): ?self
     {
         $dragones = self::catalogo_completo();

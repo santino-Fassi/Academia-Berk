@@ -24,7 +24,7 @@ $ilustracion = $dragon->getIlustracion();
         </div>
 
         <div class="col-12 col-lg-7 text-center text-lg-start">
-            <p class="text-uppercase fw-bold text-secondary mb-1">Compendio Oficial de Berk</p>
+            <p class="d-none d-lg-block text-uppercase fw-bold text-secondary mb-1">Compendio Oficial de Berk</p>
             <h2 class="display-5 text-primary fw-bold mb-2 text-shadow-titles">
                 <?= $dragon->getNombre() ?>
             </h2>

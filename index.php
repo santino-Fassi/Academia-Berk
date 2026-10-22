@@ -2,7 +2,6 @@
 
 require_once "includes/helpers.php";
 require_once "classes/Vista.php";
-require_once "classes/Producto.php";
 require_once "classes/Dragon.php";
 require_once "classes/Perfil.php";
 require_once "classes/Mision.php";
@@ -21,7 +20,7 @@ $vista = Vista::validarVista($_GET["vista"] ?? "inicio");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACADEMIA DE JINETES DE BERK - <?= $vista->getTitulo()?></title>
+    <title>ACADEMIA DE JINETES DE BERK - <?= $vista->getTitulo() ?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
@@ -29,7 +28,8 @@ $vista = Vista::validarVista($_GET["vista"] ?? "inicio");
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"
         defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=MedievalSharp&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=MedievalSharp&display=swap"
+        rel="stylesheet">
     <link rel="icon" type="img/favcon" href="img/favicon.ico">
 </head>
 
@@ -46,25 +46,52 @@ $vista = Vista::validarVista($_GET["vista"] ?? "inicio");
                     data-bs-target="#navbarNavDropdown">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.php?vista=compendio">Todos los dragones</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.php?vista=conoce-tu-companero#conoceTuCompanero">Conoce a tu compañero</a>
+
+                        <li class="nav-item">
+                            <a class="nav-link <?= $vista->getNombre() == 'inicio' ? 'active' : '' ?>"
+                                <?= $vista->getNombre() == 'inicio' ? 'aria-current="page"' : '' ?> href="index.php">
+                                Inicio
+                            </a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="index.php?vista=mapa">Mapa</a></li>
+
+                        <li class="nav-item">
+                            <a class="nav-link <?= $vista->getNombre() == 'compendio' ? 'active' : '' ?>"
+                                <?= $vista->getNombre() == 'compendio' ? 'aria-current="page"' : '' ?>
+                                href="index.php?vista=compendio">
+                                Todos los dragones
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link <?= $vista->getNombre() == 'conoce-tu-companero' ? 'active' : '' ?>"
+                                <?= $vista->getNombre() == 'conoce-tu-companero' ? 'aria-current="page"' : '' ?>
+                                href="index.php?vista=conoce-tu-companero#conoceTuCompanero">
+                                Conoce a tu compañero
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link <?= $vista->getNombre() == 'mapa' ? 'active' : '' ?>"
+                                <?= $vista->getNombre() == 'mapa' ? 'aria-current="page"' : '' ?>
+                                href="index.php?vista=mapa">
+                                Mapa
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        
+
     </header>
 
     <main class="bg-light container-fluid py-2">
 
-    <?php
+        <?php
         require_once "views/{$vista->getNombre()}.php";
-    ?>
+        ?>
 
     </main>
 

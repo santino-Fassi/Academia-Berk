@@ -483,7 +483,6 @@
         </div>
 
 
-        <!-- BOTÓN DE ENVÍO -->
         <div class="col-12 cierre-evaluacion">
 
             <div class="ornamento-cierre">ᛟ</div>

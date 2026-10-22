@@ -11,7 +11,7 @@
         "habilidades_clave": ["Camuflaje", "Vuelo sigiloso", "Camuflaje mediante explosiones de plasma", "Ecolocalización", "Inmunidad a la raíz de dragón", "Increíble precisión", "Disparo de espinas"],
         "riesgos_debilidades": ["Vientos Fuertes", "Raíz del dragón", "Incapacidad de generar chispa si está mojado", "Incapacidad para encender su fuego si está mojado", "Vulnerabilidad total al agua", "Cuerpo grande y blanco de tiro", "Cuerpo colosal y falta de agilidad"],
         "imagen": {
-            "img": "",
+            "img": "mision.webp",
             "alt": ""
         }
     },
@@ -27,7 +27,7 @@
         "habilidades_clave": ["Increíble sentido del olfato", "Rastreo", "Detección de desastres", "Ecolocalización", "Volar hacia atrás y en todas direcciones", "Explosión dispersa por impacto", "Embestida frontal", "Autoinmolación"],
         "riesgos_debilidades": ["Ataques en picada en espacios reducidos", "Visibilidad en entornos oscuros o nocturnos", "Astas propensas a engancharse", "Facilidad para ser distraído por olores fuertes", "En el suelo es un dragón mucho menos ágil y más torpe en comparación con su velocidad aérea", "Confusión y desorientación ante ruidos fuertes"],
         "imagen": {
-            "img": "",
+            "img": "caverna.webp",
             "alt": ""
         }
     },
@@ -43,7 +43,7 @@
         "habilidades_clave": ["Electroquinesis", "Montar rayos para alcanzar velocidades supersónicas", "Hibernación en el hielo", "Adaptaciones subacuáticas", "Creación de nidos de dragones a partir de su propio hielo", "Maniobrabilidad y buceo excepcionales", "Ataque en picada", "Cuernos llameantes"],
         "riesgos_debilidades": ["Temperaturas frías", "Volar largas distancias", "Vulnerabilidad a temperaturas extremas", "Tamaño diminuto y poca fuerza física", "Falta de velocidad", "Velocidad y agilidad muy reducidas", "Miedo a las anguilas"],
         "imagen": {
-            "img": "",
+            "img": "hielo-chimuelo.webp",
             "alt": ""
         }
     },
@@ -59,7 +59,7 @@
         "habilidades_clave": ["Maniobrabilidad y buceo excepcionales", "Ataque en picada", "Cuernos llameantes", "Increíble sentido del olfato", "Rastreo", "Detección de desastres"],
         "riesgos_debilidades": ["Volar largas distancias", "Tamaño diminuto y poca fuerza física", "Falta de velocidad", "Velocidad y agilidad muy reducidas"],
         "imagen": {
-            "img": "",
+            "img": "busqueda.webp",
             "alt": ""
         }
     }

@@ -44,6 +44,12 @@ class Mision
         return $catalogo;
     }
 
+    /**
+     * Busca y devuelve una misión específica del catálogo según su identificador único.
+     *
+     * @param int $id Identificador único de la misión.
+     * @return self|null Instancia de Mision si existe, o null si no se encuentra.
+     */
     public static function misionPorId(int $id): ?self
     {
         $misiones = self::catalogo_completo();
@@ -92,16 +98,19 @@ class Mision
 
     /**
      * Busca en el catálogo y devuelve el dragón que mejor complementa al dragón del usuario para la misión.
+     *
      * @param Dragon $dragon Dragón del Usuario.
      * @return Dragon El dragón compañero ideal para cubrir la misión.
      */
-    public function sugerirCompaniero(Dragon $dragon): Dragon {
+    public function sugerirCompaniero(Dragon $dragon): Dragon
+    {
         $dragones = Dragon::catalogo_completo();
         $evaluacion = $this->evaluarDragon($dragon);
         $mejorCandidato = ["Dragon" => null, "Puntaje" => -999];
 
         foreach ($dragones as $candidato) {
-            if ($candidato->getId() == $dragon->getId()) continue;
+            if ($candidato->getId() == $dragon->getId())
+                continue;
             $evaluacionCandidato = $this->evaluarDragon($candidato);
 
             $complementos = array_diff($evaluacionCandidato["Ventajas"], $evaluacion['Ventajas']);
@@ -119,11 +128,13 @@ class Mision
 
     /**
      * Calcula los kilos de comida necesarios para ambos dragones durante toda la misión y combina sus dietas para armar la lista de provisiones.
+     *
      * @param Dragon $dragon Dragón del Usuario.
      * @param Dragon $aliado Dragón aliado que acompaña en la misión.
-     * @return array{dias: int, "dieta_combinada": array, "racion_diaria_aliado": float, "racion_diaria_propio": float, "total_kg": float} Datos del viaje.
+     * @return array{dias: int, dieta_combinada: string[], racion_diaria_aliado: float, racion_diaria_propio: float, total_kg: float} Datos del viaje.
      */
-    public function calcularRacionesViaje(Dragon $dragon, Dragon $aliado): array {
+    public function calcularRacionesViaje(Dragon $dragon, Dragon $aliado): array
+    {
 
         //Calculo el 1.5% del peso del dragon para las raciones por día, y lo acoto entre 3 y 25kg
         $racionesDragon = max(3, min(25, round($dragon->getPeso() * 0.015, 1)));
@@ -144,7 +155,32 @@ class Mision
         return $resultado;
     }
 
-    public function calcularResultadoMision(Dragon $dragon, Dragon $aliado, Inventario $inventario): array {
+    /**
+     * Calcula el porcentaje de éxito y simula el resultado final de la misión evaluando las habilidades del equipo,
+     * las raciones y dieta provistas en el inventario, la afinidad con el terreno, las debilidades neutralizadas o sufridas y el tamaño.
+     *
+     * @param Dragon $dragon Dragón principal del usuario.
+     * @param Dragon $aliado Dragón compañero seleccionado para la misión.
+     * @param Inventario $inventario Inventario de suministros y raciones preparado para el viaje.
+     * @return array{
+     *     porcentaje: int|float,
+     *     exito: bool,
+     *     color: string,
+     *     veredicto: string,
+     *     mensaje: string,
+     *     habilidades_cubiertas: int,
+     *     habilidades_totales: int,
+     *     kg_llevados: int|float,
+     *     kg_requeridos: float,
+     *     comidas_cubiertas: int,
+     *     comidas_totales: int,
+     *     debilidades_neutralizadas: string[],
+     *     debilidades_sufridas: string[],
+     *     problemas_tamanio: string[]
+     * } Resumen detallado con las métricas y el veredicto de la misión.
+     */
+    public function calcularResultadoMision(Dragon $dragon, Dragon $aliado, Inventario $inventario): array
+    {
         $puntaje = 10;
 
         $poolEquipo = array_unique(array_merge($dragon->getHabilidades(), $dragon->getCaracteristicas(), $aliado->getHabilidades(), $aliado->getCaracteristicas()));
@@ -174,8 +210,10 @@ class Mision
         $afinidadAliado = count(array_intersect($this->habitatFavorable, $aliado->getHabitat()));
 
         $puntosTerreno = 0;
-        if ($afinidadDragon > 0 && $afinidadAliado > 0) $puntosTerreno = 15;
-        else if ($afinidadDragon > 0 || $afinidadAliado > 0) $puntosTerreno = 10;
+        if ($afinidadDragon > 0 && $afinidadAliado > 0)
+            $puntosTerreno = 15;
+        else if ($afinidadDragon > 0 || $afinidadAliado > 0)
+            $puntosTerreno = 10;
 
         $puntaje += $puntosTerreno;
 
@@ -201,11 +239,12 @@ class Mision
         if (in_array($dragon->getTamanio()["tipo"], $this->tamaniosRiesgosos) && in_array($aliado->getTamanio()["tipo"], $this->tamaniosRiesgosos)) {
             $penalizacionTamanio = 12;
             $problemasTamanio[] = $dragon->getTamanio()["tipo"];
-        }
-        else if (in_array($dragon->getTamanio()["tipo"], $this->tamaniosRiesgosos) || in_array($aliado->getTamanio()["tipo"], $this->tamaniosRiesgosos)) {
+        } else if (in_array($dragon->getTamanio()["tipo"], $this->tamaniosRiesgosos) || in_array($aliado->getTamanio()["tipo"], $this->tamaniosRiesgosos)) {
             $penalizacionTamanio = 6;
-            if (in_array($dragon->getTamanio()["tipo"], $this->tamaniosRiesgosos)) $problemasTamanio[] = $dragon->getTamanio()["tipo"];
-            else $problemasTamanio[] = $aliado->getTamanio()["tipo"];
+            if (in_array($dragon->getTamanio()["tipo"], $this->tamaniosRiesgosos))
+                $problemasTamanio[] = $dragon->getTamanio()["tipo"];
+            else
+                $problemasTamanio[] = $aliado->getTamanio()["tipo"];
         }
 
         $puntaje -= $penalizacionDebilidades + $penalizacionTamanio;
@@ -334,11 +373,13 @@ class Mision
     }
 
 
-	public function getHabitatFavorable() : array {
-		return $this->habitatFavorable;
-	}
+    public function getHabitatFavorable(): array
+    {
+        return $this->habitatFavorable;
+    }
 
-	public function setHabitatFavorable(array $value) {
-		$this->habitatFavorable = $value;
-	}
+    public function setHabitatFavorable(array $value)
+    {
+        $this->habitatFavorable = $value;
+    }
 }

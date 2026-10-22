@@ -72,5 +72,11 @@
         "titulo": "Detalle del Dragón",
         "activa": true,
         "restringida": false
+    },
+    {
+        "nombre": "mapa",
+        "titulo": "Mapa",
+        "activa": true,
+        "restringida": false
     }
 ]

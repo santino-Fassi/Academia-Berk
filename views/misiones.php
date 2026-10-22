@@ -43,8 +43,8 @@ $misiones = Mision::catalogo_completo();
                         src="img/misiones/<?= $mision->getImagen()["img"] ?>"
                         alt="<?= $mision->getImagen()["alt"] ?>"
                     >
-                    <span class="sello-duracion">
-                        <?= $mision->getDuracion() ?> DÍAS
+                    <span class="sello-duracion text-light">
+                        <?= $mision->getDuracion() ?> DÍA<?=$mision->getDuracion() == 1? "":"S"?>
                     </span>
                 </div>
                 
