@@ -40,7 +40,7 @@ $dragones = Dragon::catalogo_completo()
                             </ul>
                             <div class="card-footer mt-auto">
                                 <a href="index.php?vista=detalle-dragon&dragon_id=<?= $dragon->getId() ?>"
-                                    class="btn btn-purple">Saber
+                                    class="btn btn-purple" role="button">Saber
                                     más</a>
                             </div>
                         </div>

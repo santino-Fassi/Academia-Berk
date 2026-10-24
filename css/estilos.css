@@ -128,7 +128,7 @@ body {
     font-family: 'Trebuchet MS', sans-serif;
     color: #1a1818;
     max-width: 1280px;
-    background-color: #856058;
+    background-color: #0d1923;
     background-image: url("../img/trama.webp");
     background-repeat: repeat;
     background-size: auto;
@@ -138,7 +138,7 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4, .italic-font {
     font-family: "Caesar Dressing", system-ui;
 }
 
@@ -832,7 +832,7 @@ img {
             rgba(15, 29, 40, 0.05));
 }
 
-.contenido-portada-mision h1 {
+.contenido-portada-mision h2 {
     margin: 0.75rem 0;
     color: #faf5eb;
     font-size: clamp(2rem, 5vw, 3.5rem);
@@ -902,7 +902,7 @@ img {
     letter-spacing: 0.12em;
 }
 
-.objetivo-mision h2 {
+.objetivo-mision h3 {
     color: #faf5eb;
 }
 
@@ -951,7 +951,7 @@ img {
     letter-spacing: 0.12em;
 }
 
-.encabezado-seccion-mision h2 {
+.encabezado-seccion-mision h3 {
     margin: 0;
     color: var(--mision-azul);
     font-size: clamp(1.4rem, 3vw, 2rem);
@@ -972,7 +972,7 @@ img {
     background: #faf5eb;
 }
 
-.inventario-provisiones h3 {
+.inventario-provisiones h4 {
     color: var(--mision-azul);
     font-size: 1.25rem;
 }
@@ -1498,7 +1498,6 @@ img {
     height: auto;
 }
 
-/* Puntos interactivos */
 
 .punto-mapa {
     position: absolute;
@@ -1534,16 +1533,14 @@ img {
     box-shadow: 0 0 0 5px rgba(184, 115, 20, 0.25);
 }
 
-/* Tarjeta flotante de la región */
-
 .tarjeta-region {
     position: absolute;
     z-index: 10;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: min(440px, calc(100% - 24px));
-    height: 480px;
+    width: min(600px, calc(100% - 24px));
+    height: 600px;
     max-height: calc(100% - 24px);
     display: flex;
     flex-direction: column;
@@ -1574,7 +1571,7 @@ img {
 }
 
 .titulo-region {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 /* Botón para cerrar */
@@ -1738,6 +1735,7 @@ img {
     .contenido-banner-mapa > p:not(.etiqueta-banner-mapa) {
         font-size: 0.95rem;
     }
+
 }
 
 @media (min-width: 992px) {

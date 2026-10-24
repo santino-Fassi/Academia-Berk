@@ -31,23 +31,20 @@ $misiones = Mision::catalogo_completo();
         </div>
     </header>
 
-        <div class="grid-misiones">
+    <div class="grid-misiones">
 
-            <?php
-            foreach ($misiones as $mision) {
-                $aliado = $mision->sugerirCompaniero($dragon);
-                ?>
-                <article class="tarjeta-mision">
+        <?php
+        foreach ($misiones as $mision) {
+            $aliado = $mision->sugerirCompaniero($dragon);
+            ?>
+            <article class="tarjeta-mision">
                 <div class="imagen-mision">
-                    <img
-                        src="img/misiones/<?= $mision->getImagen()["img"] ?>"
-                        alt="<?= $mision->getImagen()["alt"] ?>"
-                    >
+                    <img src="img/misiones/<?= $mision->getImagen()["img"] ?>" alt="<?= $mision->getImagen()["alt"] ?>">
                     <span class="sello-duracion text-light">
-                        <?= $mision->getDuracion() ?> DÍA<?=$mision->getDuracion() == 1? "":"S"?>
+                        <?= $mision->getDuracion() ?> DÍA<?= $mision->getDuracion() == 1 ? "" : "S" ?>
                     </span>
                 </div>
-                
+
                 <div class="contenido-mision">
 
                     <span class="etiqueta-mision">ORDEN DE MISIÓN</span>
@@ -59,24 +56,27 @@ $misiones = Mision::catalogo_completo();
                     </p>
 
                     <div class="aliado-mision">
-                    <span class="icono-aliado">✦</span>
-                    <div>
-                        <span class="texto-aliado">COMPAÑERO ASIGNADO</span>
-                        <p><?= $aliado->getNombre() ?></p>
+                        <span class="icono-aliado">✦</span>
+                        <div>
+                            <span class="texto-aliado">COMPAÑERO ASIGNADO</span>
+                            <p><?= $aliado->getNombre() ?></p>
+                        </div>
                     </div>
-                </div>
 
-                    <a href="index.php?vista=detalle-mision&mision=<?=$mision->getId()?>" class="btn btn-primary">Ver Detalles</a>
+                    <a href="index.php?vista=detalle-mision&mision=<?= $mision->getId() ?>" class="btn btn-primary"
+                        role="button">Ver Detalles</a>
                 </div>
-                </article>    
-                <?php
-            }
-            ?>
+            </article>
+            <?php
+        }
+        ?>
 
-            <div class="pie-catalogo">
-                <span>✦</span>
-                <p>Un buen jinete conoce el desafío antes de emprender el vuelo.</p>
-                <span>✦</span>
-            </div>
+        <div class="pie-catalogo">
+            <span>✦</span>
+            <p>Un buen jinete conoce el desafío antes de emprender el vuelo.</p>
+            <span>✦</span>
+        </div>
+    
+    </div>
 
 </section>

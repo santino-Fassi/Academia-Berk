@@ -109,10 +109,10 @@ $resultado = $mision->calcularResultadoMision($dragon, $aliado, $inventario);
 
     <!-- BOTONES DE NAVEGACIÓN -->
     <div class="d-flex flex-wrap justify-content-center gap-3">
-        <a href="index.php?vista=preparacion&mision=<?= $mision->getId() ?>" class="btn btn-outline-primary btn-lg">
+        <a href="index.php?vista=preparacion&mision=<?= $mision->getId() ?>" class="btn btn-outline-primary btn-lg" role="button">
             Reintentar Preparación
         </a>
-        <a href="index.php?vista=misiones" class="btn btn-primary btn-lg">
+        <a href="index.php?vista=misiones" class="btn btn-primary btn-lg" role="button">
             Elegir otra Misión
         </a>
     </div>

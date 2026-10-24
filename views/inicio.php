@@ -77,7 +77,7 @@ $filtro = $_GET["filtro"] ?? "";
             </p>
 
             <a href="index.php?vista=conoce-tu-companero#conoceTuCompanero"
-                class="enlace-acceso">
+                class="enlace-acceso" role="button">
                 Encontrá tu dragón
                 <span>→</span>
             </a>
@@ -105,7 +105,7 @@ $filtro = $_GET["filtro"] ?? "";
                 dragones antes de preparar tu próxima expedición.
             </p>
 
-            <a href="index.php?vista=compendio" class="enlace-acceso">
+            <a href="index.php?vista=compendio" class="enlace-acceso" role="button">
                 Explorar el compendio
                 <span>→</span>
             </a>
@@ -134,7 +134,7 @@ $filtro = $_GET["filtro"] ?? "";
                 tus alforjas antes de partir.
             </p>
 
-            <a href="index.php?vista=mapa" class="enlace-acceso">
+            <a href="index.php?vista=mapa" class="enlace-acceso" role="button">
                 Abrir el mapa
                 <span>→</span>
             </a>

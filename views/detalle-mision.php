@@ -12,7 +12,7 @@ $aliado = $mision->sugerirCompaniero($dragon);
 
     <!-- NAVEGACIÓN -->
     <div class="navegacion-mision">
-        <a href="index.php?vista=misiones" class="btn-volver">
+        <a href="index.php?vista=misiones" class="btn-volver" role="button">
             ← Volver a las misiones
         </a>
 
@@ -33,7 +33,7 @@ $aliado = $mision->sugerirCompaniero($dragon);
                 INFORME TÁCTICO
             </span>
 
-            <h1><?= $mision->getTitulo() ?></h1>
+            <h2 class="h1"><?= $mision->getTitulo() ?></h2>
 
             <p>
                 Prepará a tu equipo. Estudiá el terreno.
@@ -47,23 +47,23 @@ $aliado = $mision->sugerirCompaniero($dragon);
     <!-- DATOS PRINCIPALES -->
     <div class="datos-mision">
 
-        <article class="dato-mision">
+        <div class="dato-mision">
             <span class="icono-dato">✦</span>
             <span class="etiqueta-dato">Clima esperado</span>
             <span class="fw-bold"><?= $mision->getClima() ?></span>
-        </article>
+        </div>
 
-        <article class="dato-mision">
+        <div class="dato-mision">
             <span class="icono-dato">⌖</span>
             <span class="etiqueta-dato">Tipo de terreno</span>
             <span class="fw-bold"><?= $mision->getTerreno() ?></span>
-        </article>
+        </div>
 
-        <article class="dato-mision">
+        <div class="dato-mision">
             <span class="icono-dato">◷</span>
             <span class="etiqueta-dato">Duración</span>
             <span class="fw-bold"><?= $mision->getDuracion() ?> día<?= $mision->getDuracion() == 1 ? "" : "s" ?></span>
-        </article>
+        </div>
 
     </div>
 
@@ -71,7 +71,7 @@ $aliado = $mision->sugerirCompaniero($dragon);
     <section class="objetivo-mision">
 
         <div class="insignia-objetivo">OBJETIVO</div>
-        <h2>La misión</h2>
+        <h3 class="h2">La misión</h3>
         <p class="text-light"><?= $mision->getObjetivo() ?></p>
 
     </section>
@@ -85,7 +85,7 @@ $aliado = $mision->sugerirCompaniero($dragon);
 
             <div>
                 <p class="sobrelinea">COMPOSICIÓN DEL EQUIPO</p>
-                <h2>Tu compañero de misión</h2>
+                <h3 class="h2">Tu compañero de misión</h3>
             </div>
         </div>
 
@@ -103,9 +103,9 @@ $aliado = $mision->sugerirCompaniero($dragon);
 
                 <div class="col-12 col-md-7">
                     <div class="card-body text-center text-md-start">
-                        <h3 class="card-title display-6 text-primary fw-bold mb-2">
+                        <h4 class="h3 card-title display-6 text-primary fw-bold mb-2">
                             <?= $aliado->getNombre() ?>
-                        </h3>
+                        </h4>
                         <p class="h4 mb-3">
                             <span class="fw-bold text-primary">Clase: </span>
                             <span class="badge bg-warning"><?= $aliado->getClase() ?></span>
@@ -134,7 +134,7 @@ $aliado = $mision->sugerirCompaniero($dragon);
 
                         <div class="card-footer bg-transparent border-0 px-0 pb-0 text-center text-md-end">
                             <a href="index.php?vista=detalle-dragon&dragon_id=<?= $aliado->getId() ?>"
-                                class="btn btn-purple px-4 fw-bold" target="_blank">
+                                class="btn btn-purple px-4 fw-bold" target="_blank" role="button">
                                 Saber más
                             </a>
                         </div>
@@ -143,183 +143,183 @@ $aliado = $mision->sugerirCompaniero($dragon);
 
             </div>
         </div>
-        </div>
-
-
-        <div class="col-12 pt-5">
-            <h3>Aptitudes recomendadas y riesgos</h3>
-            <p>La misión cuenta con una serie de características que la harán más o menos difícil dependiendo de los
-                dragones que participen.<br>Los elementos marcados en verde, significan que tu dragón cumple con la
-                condición. Lo marcado en azul, es lo que vos no cumplís, pero tu compañero sí. Lo marcado en rojo son
-                atributos que tu dragón posee y serán perjudiciales en la misión. Y lo marcado en amarillo son los
-                atributos de tu compañero que lo perjudicarán a él.</p>
-            <div class="row pt-3">
-                <div class="col-12 col-md-6">
-                    <h4>Afinidad de territorios</h4>
-                    <p>Los dragones que se saben manejar en estos tipos de entornos se desenvolverán mejor en la misión.
-                    </p>
-                    <ul class="ps-0">
-                        <?php
-                        foreach ($mision->getHabitatFavorable() as $habitat) {
-                            $clase = "";
-                            if (in_array($habitat, $dragon->getHabitat())) {
-                                $clase = "text-success";
-                            } else if (in_array($habitat, $aliado->getHabitat())) {
-                                $clase = "text-primary";
-                            }
-                            ?>
-                            <li class="opcion-atributo <?= $clase ?>"><?= $habitat ?></li>
-                            <?php
-                        }
-                        ?>
-                    </ul>
-                </div>
-                <div class="col-12 col-md-6">
-                    <h4>Habilidades Clave</h4>
-                    <p>Dragones que tengan las siguientes habilidades tendrán un mejor desempeño en la misión.</p>
-                    <ul class="ps-0">
-                        <?php
-                        foreach ($mision->getHabilidadesClave() as $habilidad) {
-                            $clase = "";
-                            if (in_array($habilidad, $dragon->getHabilidades())) {
-                                $clase = "text-success";
-                            } else if (in_array($habilidad, $aliado->getHabilidades())) {
-                                $clase = "text-primary";
-                            }
-                            ?>
-                            <li class="opcion-atributo <?= $clase ?>"><?= $habilidad ?></li>
-                            <?php
-                        }
-                        ?>
-                    </ul>
-                </div>
-            </div>
-            <div class="row pt-3">
-                <div class="col-12 col-md-6">
-                    <h4>Debilidades</h4>
-                    <p>Los dragones con las siguientes debilidades poseen tendrán más problemas en la misión.</p>
-                    <ul class="ps-0">
-                        <?php
-                        foreach ($mision->getRiesgosDebilidades() as $debilidad) {
-                            $clase = "";
-                            if (in_array($debilidad, $dragon->getDebilidades())) {
-                                $clase = "text-danger";
-                            } else if (in_array($debilidad, $aliado->getDebilidades())) {
-                                $clase = "text-warning";
-                            }
-                            ?>
-                            <li class="opcion-atributo <?= $clase ?>"><?= $debilidad ?></li>
-                            <?php
-                        }
-                        ?>
-                    </ul>
-                </div>
-                <div class="col-12 col-md-6">
-                    <h4>Tamaños de dragón peligrosos</h4>
-                    <p>Los dragones que sean de estos tipos de tamaño se verán perjudicados a la hora de hacer maniobras
-                        en la misión.</p>
-                    <ul class="ps-0">
-                        <?php
-                        foreach ($mision->getTamaniosRiesgosos() as $tamanio) {
-                            $clase = "";
-                            if ($tamanio == $dragon->getTamanio()["tipo"]) {
-                                $clase = "text-danger";
-                            } else if ($tamanio == $aliado->getTamanio()["tipo"]) {
-                                $clase = "text-warning";
-                            }
-                            ?>
-                            <li class="opcion-atributo <?= $clase ?>"><?= $tamanio ?></li>
-                            <?php
-                        }
-                        ?>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="col-12">
-            <?php
-            $raciones = $mision->calcularRacionesViaje($dragon, $aliado);
-            ?>
-
-            <section class="seccion-mision provisiones-mision">
-
-                <div class="encabezado-seccion-mision">
-                    <span class="numero-seccion">02</span>
-
-                    <div>
-                        <p class="sobrelinea">ANTES DE PARTIR</p>
-                        <h2>Provisiones de vuelo</h2>
-                    </div>
-                </div>
-
-                <p class="introduccion-seccion">
-                    Cada dragón tiene su propia dieta. Prepará las
-                    raciones necesarias para que ambos puedan completar
-                    la expedición.
-                </p>
-
-                <div class="inventario-provisiones">
-
-                    <h3>Inventario de alimentos</h3>
-
-                    <ul class="lista-provisiones">
-                        <?php
-                        foreach ($raciones["dieta_combinada"] as $comida) {
-
-                            $para = "";
-                            if (
-                                in_array($comida, $dragon->getDieta()) &&
-                                in_array($comida, $aliado->getDieta())
-                            ) {
-                                $para = $dragon->getNombre()
-                                    . " y " . $aliado->getNombre();
-
-                            } else if (in_array($comida, $dragon->getDieta())) {
-                                $para = $dragon->getNombre();
-                            } else {
-                                $para = $aliado->getNombre();
-                            }
-                            ?>
-
-                            <li>
-                                <span class="icono-provision">✦</span>
-
-                                <span class="nombre-provision">
-                                    <?= $comida ?>
-                                </span>
-
-                                <span class="destino-provision">
-                                    <?= $para ?>
-                                </span>
-                            </li>
-
-                            <?php
-                        }
-                        ?>
-                    </ul>
-
-                </div>
-
-                <div class="total-provisiones">
-                    <span>COMIDA MÍNIMA NECESARIA</span>
-
-                    <strong>
-                        <?= $raciones["total_kg"] ?> kg
-                    </strong>
-
-                    <p>Raciones calculadas para ambos dragones.</p>
-                </div>
-
-                <div class="accion-mision">
-                    <a href="index.php?vista=preparacion&mision=<?= $mision->getId() ?>" class="btn btn-preparar">
-                        Preparar suministros →
-                    </a>
-                </div>
-        </div>
-
-
-
-
     </section>
+
+
+    <div class="col-12 pt-5">
+        <h3>Aptitudes recomendadas y riesgos</h3>
+        <p>La misión cuenta con una serie de características que la harán más o menos difícil dependiendo de los
+            dragones que participen.<br>Los elementos marcados en verde, significan que tu dragón cumple con la
+            condición. Lo marcado en azul, es lo que vos no cumplís, pero tu compañero sí. Lo marcado en rojo son
+            atributos que tu dragón posee y serán perjudiciales en la misión. Y lo marcado en amarillo son los
+            atributos de tu compañero que lo perjudicarán a él.</p>
+        <div class="row pt-3">
+            <div class="col-12 col-md-6">
+                <h4>Afinidad de territorios</h4>
+                <p>Los dragones que se saben manejar en estos tipos de entornos se desenvolverán mejor en la misión.
+                </p>
+                <ul class="ps-0">
+                    <?php
+                    foreach ($mision->getHabitatFavorable() as $habitat) {
+                        $clase = "";
+                        if (in_array($habitat, $dragon->getHabitat())) {
+                            $clase = "text-success";
+                        } else if (in_array($habitat, $aliado->getHabitat())) {
+                            $clase = "text-primary";
+                        }
+                        ?>
+                        <li class="opcion-atributo <?= $clase ?>"><?= $habitat ?></li>
+                        <?php
+                    }
+                    ?>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6">
+                <h4>Habilidades Clave</h4>
+                <p>Dragones que tengan las siguientes habilidades tendrán un mejor desempeño en la misión.</p>
+                <ul class="ps-0">
+                    <?php
+                    foreach ($mision->getHabilidadesClave() as $habilidad) {
+                        $clase = "";
+                        if (in_array($habilidad, $dragon->getHabilidades())) {
+                            $clase = "text-success";
+                        } else if (in_array($habilidad, $aliado->getHabilidades())) {
+                            $clase = "text-primary";
+                        }
+                        ?>
+                        <li class="opcion-atributo <?= $clase ?>"><?= $habilidad ?></li>
+                        <?php
+                    }
+                    ?>
+                </ul>
+            </div>
+        </div>
+        <div class="row pt-3">
+            <div class="col-12 col-md-6">
+                <h4>Debilidades</h4>
+                <p>Los dragones con las siguientes debilidades poseen tendrán más problemas en la misión.</p>
+                <ul class="ps-0">
+                    <?php
+                    foreach ($mision->getRiesgosDebilidades() as $debilidad) {
+                        $clase = "";
+                        if (in_array($debilidad, $dragon->getDebilidades())) {
+                            $clase = "text-danger";
+                        } else if (in_array($debilidad, $aliado->getDebilidades())) {
+                            $clase = "text-warning";
+                        }
+                        ?>
+                        <li class="opcion-atributo <?= $clase ?>"><?= $debilidad ?></li>
+                        <?php
+                    }
+                    ?>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6">
+                <h4>Tamaños de dragón peligrosos</h4>
+                <p>Los dragones que sean de estos tipos de tamaño se verán perjudicados a la hora de hacer maniobras
+                    en la misión.</p>
+                <ul class="ps-0">
+                    <?php
+                    foreach ($mision->getTamaniosRiesgosos() as $tamanio) {
+                        $clase = "";
+                        if ($tamanio == $dragon->getTamanio()["tipo"]) {
+                            $clase = "text-danger";
+                        } else if ($tamanio == $aliado->getTamanio()["tipo"]) {
+                            $clase = "text-warning";
+                        }
+                        ?>
+                        <li class="opcion-atributo <?= $clase ?>"><?= $tamanio ?></li>
+                        <?php
+                    }
+                    ?>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-12">
+        <?php
+        $raciones = $mision->calcularRacionesViaje($dragon, $aliado);
+        ?>
+
+        <section class="seccion-mision provisiones-mision">
+
+            <div class="encabezado-seccion-mision">
+                <span class="numero-seccion">02</span>
+
+                <div>
+                    <p class="sobrelinea">ANTES DE PARTIR</p>
+                    <h3 class="h2">Provisiones de vuelo</h3>
+                </div>
+            </div>
+
+            <p class="introduccion-seccion">
+                Cada dragón tiene su propia dieta. Prepará las
+                raciones necesarias para que ambos puedan completar
+                la expedición.
+            </p>
+
+            <div class="inventario-provisiones">
+
+                <h4 class="h3">Inventario de alimentos</h4>
+
+                <ul class="lista-provisiones">
+                    <?php
+                    foreach ($raciones["dieta_combinada"] as $comida) {
+
+                        $para = "";
+                        if (
+                            in_array($comida, $dragon->getDieta()) &&
+                            in_array($comida, $aliado->getDieta())
+                        ) {
+                            $para = $dragon->getNombre()
+                                . " y " . $aliado->getNombre();
+
+                        } else if (in_array($comida, $dragon->getDieta())) {
+                            $para = $dragon->getNombre();
+                        } else {
+                            $para = $aliado->getNombre();
+                        }
+                        ?>
+
+                        <li>
+                            <span class="icono-provision">✦</span>
+
+                            <span class="nombre-provision">
+                                <?= $comida ?>
+                            </span>
+
+                            <span class="destino-provision">
+                                <?= $para ?>
+                            </span>
+                        </li>
+
+                        <?php
+                    }
+                    ?>
+                </ul>
+
+            </div>
+
+            <div class="total-provisiones">
+                <span>COMIDA MÍNIMA NECESARIA</span>
+
+                <span class="fw-bold">
+                    <?= $raciones["total_kg"] ?> kg
+                </span>
+
+                <p>Raciones calculadas para ambos dragones.</p>
+            </div>
+
+            <div class="accion-mision">
+                <a href="index.php?vista=preparacion&mision=<?= $mision->getId() ?>" class="btn btn-preparar"
+                    role="button">
+                    Preparar suministros →
+                </a>
+            </div>
+        </section>
+    </div>
+
+
+</section>

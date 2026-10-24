@@ -9,7 +9,7 @@ $ilustracion = $dragon->getIlustracion();
 <section class="mt-5 mb-5 p-4 p-md-5 bg-light shadow rounded" id="detalleDragon">
 
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <a href="index.php?vista=compendio" class="btn btn-secondary">
+        <a href="index.php?vista=compendio" class="btn btn-secondary" role="button">
             Volver al Compendio
         </a>
     </div>
@@ -138,19 +138,19 @@ $ilustracion = $dragon->getIlustracion();
     <!-- NAVEGACIÓN ENTRE FICHAS DEL COMPENDIO -->
     <div class="d-flex justify-content-between align-items-center mt-5 pt-3 border-top">
         <?php if ($dragon->getId() > 1) { ?>
-            <a href="index.php?vista=detalle-dragon&dragon_id=<?= $dragon->getId() - 1 ?>" class="btn btn-outline-primary">
+            <a href="index.php?vista=detalle-dragon&dragon_id=<?= $dragon->getId() - 1 ?>" class="btn btn-outline-primary" role="button">
                 ← Dragón Anterior
             </a>
         <?php } else { ?>
             <span></span>
         <?php } ?>
 
-        <a href="index.php?vista=conoce-tu-companero" class="btn btn-purple fw-bold">
+        <a href="index.php?vista=conoce-tu-companero" class="btn btn-purple fw-bold" role="button">
             Hacer Test de Afinidad
         </a>
 
         <?php if ($dragon->getId() < count(Dragon::catalogo_completo())) { ?>
-            <a href="index.php?vista=detalle-dragon&dragon_id=<?= $dragon->getId() + 1 ?>" class="btn btn-outline-primary">
+            <a href="index.php?vista=detalle-dragon&dragon_id=<?= $dragon->getId() + 1 ?>" class="btn btn-outline-primary" role="button">
                 Siguiente Dragón →
             </a>
         <?php } else { ?>

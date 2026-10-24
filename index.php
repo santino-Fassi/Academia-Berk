@@ -3,6 +3,7 @@
 require_once "includes/helpers.php";
 require_once "classes/Vista.php";
 require_once "classes/Dragon.php";
+require_once "classes/Region.php";
 require_once "classes/Perfil.php";
 require_once "classes/Mision.php";
 require_once "classes/Suministro.php";

@@ -23,7 +23,7 @@ $poolAliado = array_merge($aliado->getHabilidades(), $aliado->getCaracteristicas
 ?>
 
 <section class="mt-5 mb-5 p-4 p-md-5 bg-light shadow rounded" id="preparacionMision">
-    <a href="index.php?vista=detalle-mision&mision=<?= $mision->getId() ?>" class="btn btn-secondary mb-4">Volver al detalle</a>
+    <a href="index.php?vista=detalle-mision&mision=<?= $mision->getId() ?>" class="btn btn-secondary mb-4" role="button">Volver al detalle</a>
 
     <div class="text-center mb-5">
         <p class="text-uppercase fw-bold text-primary">Intendencia de Berk</p>
@@ -209,12 +209,12 @@ $poolAliado = array_merge($aliado->getHabilidades(), $aliado->getCaracteristicas
 
         <!-- BOTONES DE ACCIÓN -->
         <div class="d-flex justify-content-center gap-3">
-            <a href="index.php?vista=preparacion&mision=<?=$mision->getId()?>" class="btn btn-outline-primary btn-lg">
+            <a href="index.php?vista=preparacion&mision=<?=$mision->getId()?>" class="btn btn-outline-primary btn-lg" role="button">
                 Reiniciar Preparación
             </a>
 
             <a href="index.php?vista=resultado-mision&mision=<?=$mision->getId()?>"
-                    class="btn btn-primary btn-lg px-5 fw-bold <?=$presupuestoExcedido? "d-none": ""?>">
+                    class="btn btn-primary btn-lg px-5 fw-bold <?=$presupuestoExcedido? "d-none": ""?>" role="button">
                 ¡Emprender Misión!
             </a>
         </div>

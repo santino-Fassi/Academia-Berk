@@ -183,7 +183,7 @@ class Mision
     {
         $puntaje = 10;
 
-        $poolEquipo = array_unique(array_merge($dragon->getHabilidades(), $dragon->getCaracteristicas(), $aliado->getHabilidades(), $aliado->getCaracteristicas()));
+        $poolEquipo = array_unique(array_merge($dragon->getHabilidades(), $dragon->getCaracteristicas(), $aliado->getHabilidades(), $aliado->getCaracteristicas(), $inventario->obtenerHabilidades()));
 
         //puntos por habilidades
         $habilidadesCubiertas = array_intersect($this->habilidadesClave, $poolEquipo);
@@ -272,112 +272,232 @@ class Mision
 
     }
 
+    /**
+     * Devuelve el identificador único de la misión.
+     *
+     * @return int ID de la misión.
+     */
     public function getId(): int
     {
         return $this->id;
     }
 
+    /**
+     * Establece el identificador único de la misión.
+     *
+     * @param int $value Nuevo ID de la misión.
+     * @return void
+     */
     public function setId(int $value)
     {
         $this->id = $value;
     }
 
+    /**
+     * Devuelve el título de la misión.
+     *
+     * @return string Título de la misión.
+     */
     public function getTitulo(): string
     {
         return $this->titulo;
     }
 
+    /**
+     * Establece el título de la misión.
+     *
+     * @param string $value Nuevo título de la misión.
+     * @return void
+     */
     public function setTitulo(string $value)
     {
         $this->titulo = $value;
     }
 
+    /**
+     * Devuelve la descripción del objetivo principal de la misión.
+     *
+     * @return string Objetivo de la misión.
+     */
     public function getObjetivo(): string
     {
         return $this->objetivo;
     }
 
+    /**
+     * Establece la descripción del objetivo principal de la misión.
+     *
+     * @param string $value Nuevo objetivo de la misión.
+     * @return void
+     */
     public function setObjetivo(string $value)
     {
         $this->objetivo = $value;
     }
 
+    /**
+     * Devuelve las condiciones climáticas esperadas en la misión.
+     *
+     * @return string Clima de la misión.
+     */
     public function getClima(): string
     {
         return $this->clima;
     }
 
+    /**
+     * Establece las condiciones climáticas de la misión.
+     *
+     * @param string $value Nuevo clima de la misión.
+     * @return void
+     */
     public function setClima(string $value)
     {
         $this->clima = $value;
     }
 
+    /**
+     * Devuelve el tipo de terreno donde se desarrolla la misión.
+     *
+     * @return string Terreno de la misión.
+     */
     public function getTerreno(): string
     {
         return $this->terreno;
     }
 
+    /**
+     * Establece el tipo de terreno de la misión.
+     *
+     * @param string $value Nuevo terreno de la misión.
+     * @return void
+     */
     public function setTerreno(string $value)
     {
         $this->terreno = $value;
     }
 
+    /**
+     * Devuelve la duración estimada de la misión en días.
+     *
+     * @return int Duración en días.
+     */
     public function getDuracion(): int
     {
         return $this->duracion;
     }
 
+    /**
+     * Establece la duración estimada de la misión en días.
+     *
+     * @param int $value Nueva duración en días.
+     * @return void
+     */
     public function setDuracion(int $value)
     {
         $this->duracion = $value;
     }
 
+    /**
+     * Devuelve las categorías de tamaño de dragón que presentan riesgo en esta misión.
+     *
+     * @return string[] Lista de tamaños riesgosos.
+     */
     public function getTamaniosRiesgosos(): array
     {
         return $this->tamaniosRiesgosos;
     }
 
+    /**
+     * Establece las categorías de tamaño de dragón que presentan riesgo en esta misión.
+     *
+     * @param string[] $value Nueva lista de tamaños riesgosos.
+     * @return void
+     */
     public function setTamaniosRiesgosos(array $value)
     {
         $this->tamaniosRiesgosos = $value;
     }
 
+    /**
+     * Devuelve las habilidades clave recomendadas para superar la misión.
+     *
+     * @return string[] Lista de habilidades clave.
+     */
     public function getHabilidadesClave(): array
     {
         return $this->habilidadesClave;
     }
 
+    /**
+     * Establece las habilidades clave recomendadas para la misión.
+     *
+     * @param string[] $value Nueva lista de habilidades clave.
+     * @return void
+     */
     public function setHabilidadesClave(array $value)
     {
         $this->habilidadesClave = $value;
     }
 
+    /**
+     * Devuelve las debilidades de los dragones que se ven perjudicadas en esta misión.
+     *
+     * @return string[] Lista de riesgos y debilidades.
+     */
     public function getRiesgosDebilidades(): array
     {
         return $this->riesgosDebilidades;
     }
 
+    /**
+     * Establece las debilidades que se ven perjudicadas en esta misión.
+     *
+     * @param string[] $value Nueva lista de riesgos y debilidades.
+     * @return void
+     */
     public function setRiesgosDebilidades(array $value)
     {
         $this->riesgosDebilidades = $value;
     }
 
+    /**
+     * Devuelve los datos de la imagen ilustrativa de la misión.
+     *
+     * @return array{img: string, alt: string} Array con ruta de imagen y texto alternativo.
+     */
     public function getImagen(): array
     {
         return $this->imagen;
     }
 
+    /**
+     * Establece los datos de la imagen ilustrativa de la misión.
+     *
+     * @param array{img: string, alt: string} $value Nuevo array con datos de imagen.
+     * @return void
+     */
     public function setImagen(array $value)
     {
         $this->imagen = $value;
     }
 
-
+    /**
+     * Devuelve los tipos de hábitat que otorgan ventaja territorial en la misión.
+     *
+     * @return string[] Lista de hábitats favorables.
+     */
     public function getHabitatFavorable(): array
     {
         return $this->habitatFavorable;
     }
 
+    /**
+     * Establece los tipos de hábitat que otorgan ventaja territorial en la misión.
+     *
+     * @param string[] $value Nueva lista de hábitats favorables.
+     * @return void
+     */
     public function setHabitatFavorable(array $value)
     {
         $this->habitatFavorable = $value;

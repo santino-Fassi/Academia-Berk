@@ -1,0 +1,33 @@
+
+[
+    {
+        "id": "berk",
+        "nombre": "Isla de Berk",
+        "descripcion": "El hogar de los vikingos y el punto de partida de las aventuras por el archipiélago.",
+        "habitats": []
+    },
+    {
+        "id": "bosques",
+        "nombre": "Bosques del archipiélago",
+        "descripcion": "Territorios con abundante vegetación donde diferentes especies encuentran refugio.",
+        "habitats": ["Bosques"]
+    },
+    {
+        "id": "montanas",
+        "nombre": "Montañas del Norte",
+        "descripcion": "Regiones elevadas y rocosas donde habitan dragones adaptados a terrenos montañosos.",
+        "habitats": ["Montañas"]
+    },
+    {
+        "id": "glaciares",
+        "nombre": "Glaciares Helados",
+        "descripcion": "Territorios de temperaturas extremas y paisajes cubiertos de hielo.",
+        "habitats": ["Regiones frías", "Nido de hielo oceánico"]
+    },
+    {
+        "id": "fuego",
+        "nombre": "Montañas de Fuego",
+        "descripcion": "Una región volcánica que requiere exploración y precaución.",
+        "habitats": []
+    }
+]

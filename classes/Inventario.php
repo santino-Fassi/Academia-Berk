@@ -150,26 +150,64 @@ class Inventario
         $this->objetos[$suministroId]--;
     }
 
+    /**
+     * Devuelve el presupuesto inicial de monedas de oro asignado al inventario.
+     *
+     * @return int Oro inicial.
+     */
     public function getOroInicial(): int
     {
         return $this->oroInicial;
     }
+
+    /**
+     * Establece el presupuesto inicial de monedas de oro.
+     *
+     * @param int $value Nuevo monto de oro inicial.
+     * @return void
+     */
     public function setOroInicial(int $value)
     {
         $this->oroInicial = $value;
     }
+
+    /**
+     * Devuelve el saldo actual de monedas de oro disponibles tras descontar los suministros.
+     *
+     * @return int Oro restante.
+     */
     public function getOro(): int
     {
         return $this->oro;
     }
+
+    /**
+     * Establece el saldo actual de monedas de oro disponibles.
+     *
+     * @param int $value Nuevo monto de oro disponible.
+     * @return void
+     */
     public function setOro(int $value)
     {
         $this->oro = $value;
     }
+
+    /**
+     * Devuelve el listado de suministros del inventario con sus respectivas cantidades.
+     *
+     * @return array<int, int> Mapa asociativo [id_suministro => cantidad].
+     */
     public function getObjetos(): array
     {
         return $this->objetos;
     }
+
+    /**
+     * Establece el listado de suministros y cantidades del inventario.
+     *
+     * @param array<int, int> $value Nuevo mapa asociativo [id_suministro => cantidad].
+     * @return void
+     */
     public function setObjetos(array $value)
     {
         $this->objetos = $value;

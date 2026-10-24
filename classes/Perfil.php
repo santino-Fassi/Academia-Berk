@@ -238,75 +238,148 @@ class Perfil
         return $dragonIdeal ?? $dragones[0];
     }
 
-
-
-
-
+    /**
+     * Devuelve el nombre del jinete ingresado en el cuestionario.
+     *
+     * @return string Nombre del jinete.
+     */
     public function getNombre(): string
     {
         return $this->nombre;
     }
 
+    /**
+     * Establece el nombre del jinete.
+     *
+     * @param string $value Nuevo nombre del jinete.
+     * @return void
+     */
     public function setNombre(string $value)
     {
         $this->nombre = $value;
     }
 
+    /**
+     * Devuelve la preferencia de razonamiento o resolución de problemas (asociada a la clase del dragón).
+     *
+     * @return string Valor de razonamiento/personalidad.
+     */
     public function getRazonamiento(): string
     {
         return $this->razonamiento;
     }
 
+    /**
+     * Establece la preferencia de razonamiento del jinete.
+     *
+     * @param string $value Nuevo valor de razonamiento.
+     * @return void
+     */
     public function setRazonamiento(string $value)
     {
         $this->razonamiento = $value;
     }
 
+    /**
+     * Devuelve el lugar preferido del jinete para desconectar (asociado al hábitat).
+     *
+     * @return string Clave del lugar para desconectar.
+     */
     public function getLugarDesconectar(): string
     {
         return $this->lugarDesconectar;
     }
 
+    /**
+     * Establece el lugar preferido del jinete para desconectar.
+     *
+     * @param string $value Nueva clave de lugar para desconectar.
+     * @return void
+     */
     public function setLugarDesconectar(string $value)
     {
         $this->lugarDesconectar = $value;
     }
 
+    /**
+     * Devuelve el ritmo de vida y nivel de energía del jinete (asociado al tamaño del dragón).
+     *
+     * @return string Clave del ritmo de vida.
+     */
     public function getRitmoVida(): string
     {
         return $this->ritmoVida;
     }
 
+    /**
+     * Establece el ritmo de vida y nivel de energía del jinete.
+     *
+     * @param string $value Nueva clave del ritmo de vida.
+     * @return void
+     */
     public function setRitmoVida(string $value)
     {
         $this->ritmoVida = $value;
     }
 
+    /**
+     * Devuelve la lista de manías y talentos seleccionados por el jinete.
+     *
+     * @return string[] Array de talentos seleccionados.
+     */
     public function getTalentos(): array
     {
         return $this->talentos;
     }
 
+    /**
+     * Establece la lista de manías y talentos del jinete.
+     *
+     * @param string[] $value Nuevo array de talentos.
+     * @return void
+     */
     public function setTalentos(array $value)
     {
         $this->talentos = $value;
     }
 
+    /**
+     * Devuelve la preferencia gastronómica del jinete (asociada a la dieta del dragón).
+     *
+     * @return string Clave de preferencia gastronómica.
+     */
     public function getGustos(): string
     {
         return $this->gustos;
     }
 
+    /**
+     * Establece la preferencia gastronómica del jinete.
+     *
+     * @param string $value Nueva clave de preferencia gastronómica.
+     * @return void
+     */
     public function setGustos(string $value)
     {
         $this->gustos = $value;
     }
 
+    /**
+     * Devuelve la paleta de colores preferida por el jinete.
+     *
+     * @return string Clave de estilo/colores.
+     */
     public function getEstilos(): string
     {
         return $this->estilos;
     }
 
+    /**
+     * Establece la paleta de colores preferida por el jinete.
+     *
+     * @param string $value Nueva clave de estilo/colores.
+     * @return void
+     */
     public function setEstilos(string $value)
     {
         $this->estilos = $value;
